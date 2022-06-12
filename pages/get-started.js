@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Row, Col } from "antd";
+import Meta from "../components/Meta";
 
 const HubspotContactForm = () => {
   useEffect(() => {
@@ -23,19 +24,22 @@ const HubspotContactForm = () => {
   }, []);
 
   return (
-    <Wrapper>
-      <Row gutter={[32, 32]} justify="center" align="middle">
-        <Col sm={24} md={12} lg={8} data-aos="fade-up">
-          <div className="box">
-            <div className="contenta">
-              <h1 className="title">Let's Go!</h1>
-            </div>
+    <>
+      <Meta title="Get Started" />
+      <Wrapper>
+        <Row gutter={[32, 32]} justify="center" align="middle">
+          <Col sm={24} md={12} lg={8} data-aos="fade-up">
+            <div className="box">
+              <div className="contenta">
+                <h1 className="title">Let's Go!</h1>
+              </div>
 
-            <div id="hubspotForm" data-aos="fade-up"></div>
-          </div>
-        </Col>
-      </Row>
-    </Wrapper>
+              <div id="hubspotForm" data-aos="fade-up"></div>
+            </div>
+          </Col>
+        </Row>
+      </Wrapper>
+    </>
   );
 };
 
