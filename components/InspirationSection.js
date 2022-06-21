@@ -46,11 +46,7 @@ const InspirationSection = ({ channels }) => {
             );
           })}
         </Row>
-        <center className="space">
-          <Link href="/">
-            <a className="btn"> View All Channels</a>
-          </Link>
-        </center>
+        <center className="space"></center>
       </div>
     </Wrapper>
   );
