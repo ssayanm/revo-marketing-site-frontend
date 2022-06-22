@@ -11,7 +11,7 @@ import ReactMarkdown from "react-markdown";
 const { Panel } = Collapse;
 
 function callback(key) {
-  console.log(key);
+  // console.log(key);
 }
 
 const PriCing = ({ pricing }) => {
