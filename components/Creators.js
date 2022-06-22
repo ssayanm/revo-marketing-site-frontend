@@ -38,8 +38,11 @@ const Creators = () => {
         <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
-              url={data.data[7].attributes.image.data.attributes.url}
-              // url={"/videos/homevideo.mp4"}
+              url={
+                data.data[7].attributes.image.data.attributes.url
+                  ? data.data[7].attributes.image.data.attributes.url
+                  : "/videos/homevideo.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -80,8 +83,11 @@ const Creators = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
+            url={
+              data.data[10].attributes.image.data.attributes.url
+                ? data.data[10].attributes.image.data.attributes.url
+                : "/videos/LiveChat_Moderation.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -101,8 +107,11 @@ const Creators = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
+            url={
+              data.data[10].attributes.image.data.attributes.url
+                ? data.data[10].attributes.image.data.attributes.url
+                : "/videos/LiveChat_Moderation.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -151,8 +160,11 @@ const Creators = () => {
         >
           <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                data.data[3].attributes.image.data.attributes.url
+                  ? data.data[3].attributes.image.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -171,8 +183,11 @@ const Creators = () => {
           </Col>
           <Col sm={24} md={8} className="onlymobile">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                data.data[3].attributes.image.data.attributes.url
+                  ? data.data[3].attributes.image.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -200,8 +215,11 @@ const Creators = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[1].attributes.image.data.attributes.url}
-            // url={"/videos/Real-Time Analytics.mp4"}
+            url={
+              data.data[1].attributes.image.data.attributes.url
+                ? data.data[1].attributes.image.data.attributes.url
+                : "/videos/Real-TimeAnalytics.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}

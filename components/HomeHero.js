@@ -19,8 +19,11 @@ const HomeHero = ({ home }) => {
               <div className="onlymobile">
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url={heroVideo.data.attributes.url}
-                    // url={"/videos/homevideo.mp4"}
+                    url={
+                      heroVideo.data.attributes.url
+                        ? heroVideo.data.attributes.url
+                        : "/videos/homevideo.mp4"
+                    }
                     playing={false}
                     muted={true}
                     controls={true}
@@ -67,8 +70,11 @@ const HomeHero = ({ home }) => {
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer
-                  // url={"/videos/homevideo.mp4"}
-                  url={heroVideo.data.attributes.url}
+                  url={
+                    heroVideo.data.attributes.url
+                      ? heroVideo.data.attributes.url
+                      : "/videos/homevideo.mp4"
+                  }
                   playing={true}
                   muted={true}
                   controls={true}

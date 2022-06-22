@@ -2,7 +2,7 @@ import { FaApple, FaShopify, FaLinkedin } from "react-icons/fa";
 import { GrAndroid } from "react-icons/gr";
 import Brands from "../components/Brands";
 import Creators from "../components/Creators";
-import Marketers from "../components/Marketers";
+import Sellers from "../components/Sellers";
 import Publishers from "../components/Publishers";
 
 export const links = [
@@ -91,7 +91,7 @@ export const categories = [
     text: "Direct Sellers",
     label: "Direct Sellers",
     url: "/",
-    components: <Marketers />,
+    components: <Sellers />,
   },
 ];
 

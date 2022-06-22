@@ -9,7 +9,7 @@ import Loading from "./Loading";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const Marketers = () => {
+const Sellers = () => {
   const { data, error } = useSWR(
     `${process.env.url}/api/how-it-works?populate=*`,
     fetcher
@@ -38,8 +38,11 @@ const Marketers = () => {
         <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper">
             <ReactPlayer
-              url={data.data[7].attributes.image.data.attributes.url}
-              // url={"/videos/homevideo.mp4"}
+              url={
+                data.data[7].attributes.image.data.attributes.url
+                  ? data.data[7].attributes.image.data.attributes.url
+                  : "/videos/homevideo.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -60,8 +63,11 @@ const Marketers = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[15].attributes.image.data.attributes.url}
-            // url={"/videos/setstudio.mp4"}
+            url={
+              data.data[15].attributes.image.data.attributes.url
+                ? data.data[15].attributes.image.data.attributes.url
+                : "/videos/setstudio.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -80,8 +86,11 @@ const Marketers = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
+            url={
+              data.data[10].attributes.image.data.attributes.url
+                ? data.data[10].attributes.image.data.attributes.url
+                : "/videos/LiveChat_Moderation.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -101,8 +110,11 @@ const Marketers = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={data.data[10].attributes.image.data.attributes.url}
-            // url={"/videos/Live Chat & Moderation.mp4"}
+            url={
+              data.data[10].attributes.image.data.attributes.url
+                ? data.data[10].attributes.image.data.attributes.url
+                : "/videos/LiveChat_Moderation.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -130,8 +142,11 @@ const Marketers = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[2].attributes.image.data.attributes.url}
-            // url={"/videos/Frictionless Checkout.mp4"}
+            url={
+              data.data[2].attributes.image.data.attributes.url
+                ? data.data[2].attributes.image.data.attributes.url
+                : "/videos/FrictionlessCheckout.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -152,8 +167,11 @@ const Marketers = () => {
         >
           <Col sm={24} md={10} className="onlydesktop" data-aos="zoom-in">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                data.data[3].attributes.image.data.attributes.url
+                  ? data.data[3].attributes.image.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -172,8 +190,11 @@ const Marketers = () => {
           </Col>
           <Col sm={24} md={8} className="onlymobile">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                data.data[3].attributes.image.data.attributes.url
+                  ? data.data[3].attributes.image.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -202,8 +223,11 @@ const Marketers = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[1].attributes.image.data.attributes.url}
-            // url={"/videos/Real-Time Analytics.mp4"}
+            url={
+              data.data[1].attributes.image.data.attributes.url
+                ? data.data[1].attributes.image.data.attributes.url
+                : "/videos/Real-TimeAnalytics.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -335,4 +359,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Marketers;
+export default Sellers;

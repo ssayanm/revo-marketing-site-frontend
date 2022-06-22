@@ -38,8 +38,11 @@ const Brands = () => {
         <Col sm={24} md={12} className="widthfull" data-aos="zoom-in">
           <div className="player-wrapper1">
             <ReactPlayer
-              url={data.data[7].attributes.image.data.attributes.url}
-              // url={"/videos/homevideo.mp4"}
+              url={
+                data.data[7].attributes.image.data.attributes.url
+                  ? data.data[7].attributes.image.data.attributes.url
+                  : "/videos/homevideo.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -74,8 +77,11 @@ const Brands = () => {
 
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[5].attributes.image.data.attributes.url}
-            // url={"/videos/catalog_sync.mp4"}
+            url={
+              data.data[5].attributes.image.data.attributes.url
+                ? data.data[5].attributes.image.data.attributes.url
+                : "/videos/catalog_sync.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -95,7 +101,11 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={data.data[5].attributes.image.data.attributes.url}
+            url={
+              data.data[5].attributes.image.data.attributes.url
+                ? data.data[5].attributes.image.data.attributes.url
+                : "/videos/catalog_sync.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -123,8 +133,11 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[0].attributes.image.data.attributes.url}
-            // url={"/videos/Live _ VOD.mp4"}
+            url={
+              data.data[0].attributes.image.data.attributes.url
+                ? data.data[0].attributes.image.data.attributes.url
+                : "/videos/Live_VOD.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -193,8 +206,11 @@ const Brands = () => {
           </Col>
           <Col sm={24} md={10} data-aos="zoom-in">
             <ReactPlayer
-              url={data.data[3].attributes.image.data.attributes.url}
-              // url={"/videos/Virtual Try On.mp4"}
+              url={
+                data.data[3].attributes.image.data.attributes.url
+                  ? data.data[3].attributes.image.data.attributes.url
+                  : "/videos/VirtualTryOn.mp4"
+              }
               playing={true}
               muted={true}
               controls={true}
@@ -215,8 +231,11 @@ const Brands = () => {
       >
         <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
           <ReactPlayer
-            url={data.data[2].attributes.image.data.attributes.url}
-            // url={"/videos/Frictionless Checkout.mp4"}
+            url={
+              data.data[2].attributes.image.data.attributes.url
+                ? data.data[2].attributes.image.data.attributes.url
+                : "/videos/FrictionlessCheckout.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -236,8 +255,11 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} className="onlymobile">
           <ReactPlayer
-            url={data.data[2].attributes.image.data.attributes.url}
-            // url={"/videos/Frictionless Checkout.mp4"}
+            url={
+              data.data[2].attributes.image.data.attributes.url
+                ? data.data[2].attributes.image.data.attributes.url
+                : "/videos/FrictionlessCheckout.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
@@ -266,8 +288,11 @@ const Brands = () => {
         </Col>
         <Col sm={24} md={12} data-aos="zoom-in">
           <ReactPlayer
-            // url={"/videos/Real-Time Analytics.mp4"}
-            url={data.data[1].attributes.image.data.attributes.url}
+            url={
+              data.data[1].attributes.image.data.attributes.url
+                ? data.data[1].attributes.image.data.attributes.url
+                : "/videos/Real-TimeAnalytics.mp4"
+            }
             playing={true}
             muted={true}
             controls={true}
