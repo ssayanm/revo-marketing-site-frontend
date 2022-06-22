@@ -39,8 +39,8 @@ const Creators = () => {
           <div className="player-wrapper">
             <ReactPlayer
               url={
-                data.data[7].attributes.image.data.attributes.url
-                  ? data.data[7].attributes.image.data.attributes.url
+                data.data[8].attributes.image.data.attributes.url
+                  ? data.data[8].attributes.image.data.attributes.url
                   : "/videos/homevideo.mp4"
               }
               playing={true}
