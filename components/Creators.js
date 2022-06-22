@@ -65,8 +65,10 @@ const Creators = () => {
             alt="Revo Video"
             src={
               data.data[9].attributes.image.data.attributes.formats.large.url
+                ? data.data[9].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Studio.jpg"
             }
-            // src="/images/Studio.jpg"
             width={1000}
             height={625}
             objectFit="cover"
@@ -142,8 +144,10 @@ const Creators = () => {
             alt="Revo Video"
             src={
               data.data[11].attributes.image.data.attributes.formats.large.url
+                ? data.data[11].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/paymentprocess.png"
             }
-            // src="/images/paymentprocess.png"
             width={1000}
             height={666}
             objectFit="cover"

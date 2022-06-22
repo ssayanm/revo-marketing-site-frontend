@@ -29,7 +29,11 @@ const InspirationSection = ({ channels }) => {
                   <a href={`${link}`} target="_blank">
                     <Image
                       alt={title}
-                      src={image.data.attributes.url}
+                      src={
+                        image.data.attributes.url
+                          ? image.data.attributes.url
+                          : "/images/Loading_i.gif"
+                      }
                       width={600}
                       height={359}
                       objectFit="contain"

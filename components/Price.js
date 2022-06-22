@@ -90,8 +90,11 @@ const Price = ({ pricing, features }) => {
           <a>
             <Image
               alt="Revo Video"
-              src={pricingImage.data.attributes.url}
-              // src="/images/pricingim.png"
+              src={
+                pricingImage.data.attributes.url
+                  ? pricingImage.data.attributes.url
+                  : "/images/pricingim.png"
+              }
               width={250}
               height={252}
               objectFit="cover"

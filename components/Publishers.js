@@ -83,8 +83,10 @@ const Publishers = () => {
             alt={data.data[13].attributes.heading}
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
+                ? data.data[4].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Weekly_Schedule.jpg"
             }
-            // src="/images/Weekly_Schedule.jpg"
             width={1000}
             height={434}
             objectFit="cover"
@@ -104,8 +106,10 @@ const Publishers = () => {
             alt={data.data[4].attributes.heading}
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
+                ? data.data[4].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Weekly_Schedule.jpg"
             }
-            // src="/images/Weekly_Schedule.jpg"
             width={1000}
             height={434}
             objectFit="cover"

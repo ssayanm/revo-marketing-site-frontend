@@ -63,11 +63,12 @@ const Brands = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
-            // url=
             src={
               data.data[6].attributes.image.data.attributes.formats.large.url
+                ? data.data[6].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Studio1.png"
             }
-            // src="/images/Studio1.png"
             width={1000}
             height={625}
             objectFit="cover"
@@ -160,8 +161,10 @@ const Brands = () => {
             alt="Revo Video"
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
+                ? data.data[4].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Weekly_Schedule.jpg"
             }
-            // src="/images/Weekly_Schedule.jpg"
             width={1000}
             height={434}
             objectFit="cover"
@@ -181,8 +184,10 @@ const Brands = () => {
             alt="Revo Video"
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
+                ? data.data[4].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Weekly_Schedule.jpg"
             }
-            // src="/images/Weekly_Schedule.jpg"
             width={1000}
             height={434}
             objectFit="cover"
