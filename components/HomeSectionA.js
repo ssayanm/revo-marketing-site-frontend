@@ -16,8 +16,11 @@ const HomeSectionA = ({ home }) => {
           {" "}
           <Image
             alt="Revo Video"
-            src={HomeSectionAimage.data.attributes.formats.large.url}
-            // src="/images/Revo_image_homepage_Section_1.png"
+            src={
+              HomeSectionAimage.data.attributes.formats.large.url
+                ? HomeSectionAimage.data.attributes.formats.large.url
+                : "/images/Revo_image_homepage_Section_1.png"
+            }
             width={1000}
             height={625}
             objectFit="cover"

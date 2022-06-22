@@ -21,12 +21,14 @@ const HomeSectionC = ({ home }) => {
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col sm={24} md={16} xl={12} data-aos="zoom-in">
-          {" "}
           <div className="onlydesktop">
             <Image
-              alt="Revo Video"
-              src={HomeSectionCimage.data.attributes.formats.large.url}
-              // src="/images/Revo_image_homepage_Section_3.png"
+              alt={HomeSectionCheading}
+              src={
+                HomeSectionCimage.data.attributes.formats.large.url
+                  ? HomeSectionCimage.data.attributes.formats.large.url
+                  : "/images/Revo_image_homepage_Section_3.png"
+              }
               width={1000}
               height={625}
               objectFit="cover"
@@ -65,8 +67,11 @@ const HomeSectionC = ({ home }) => {
           <div className="onlymobile">
             <Image
               alt={HomeSectionCheading}
-              src={HomeSectionCimage.data.attributes.formats.large.url}
-              // src="/images/Revo_image_homepage_Section_3.png"
+              src={
+                HomeSectionCimage.data.attributes.formats.large.url
+                  ? HomeSectionCimage.data.attributes.formats.large.url
+                  : "/images/Revo_image_homepage_Section_3.png"
+              }
               width={1000}
               height={625}
               objectFit="cover"

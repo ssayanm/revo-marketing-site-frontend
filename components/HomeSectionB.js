@@ -34,8 +34,11 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} data-aos="fade-up">
                 <Image
                   alt="Revo Video"
-                  src={HomeSectionBiconsA.data.attributes.url}
-                  // src="/images/cart.png"
+                  src={
+                    HomeSectionBiconsA.data.attributes.url
+                      ? HomeSectionBiconsA.data.attributes.url
+                      : "/images/cart.png"
+                  }
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -54,8 +57,11 @@ const HomeSectionB = ({ home }) => {
                 {" "}
                 <Image
                   alt="Revo Video"
-                  src={HomeSectionBiconsB.data.attributes.url}
-                  // src="/images/eng.png"
+                  src={
+                    HomeSectionBiconsB.data.attributes.url
+                      ? HomeSectionBiconsB.data.attributes.url
+                      : "/images/eng.png"
+                  }
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -75,8 +81,11 @@ const HomeSectionB = ({ home }) => {
                 {" "}
                 <Image
                   alt="Revo Video"
-                  src={HomeSectionBiconsC.data.attributes.url}
-                  // src="/images/dollar.png"
+                  src={
+                    HomeSectionBiconsC.data.attributes.url
+                      ? HomeSectionBiconsC.data.attributes.url
+                      : "/images/dollar.png"
+                  }
                   width={49}
                   height={49}
                   objectFit="cover"
@@ -93,8 +102,11 @@ const HomeSectionB = ({ home }) => {
               <Col sm={24} md={12} className="space" data-aos="fade-up">
                 <Image
                   alt="Revo Video"
-                  src={HomeSectionBiconsD.data.attributes.url}
-                  // src="/images/analytics.png"
+                  src={
+                    HomeSectionBiconsD.data.attributes.url
+                      ? HomeSectionBiconsD.data.attributes.url
+                      : "/images/analytics.png"
+                  }
                   width={83}
                   height={41}
                   objectFit="cover"
@@ -114,8 +126,11 @@ const HomeSectionB = ({ home }) => {
           <Col sm={24} md={12} className="imagecon" data-aos="zoom-in">
             <Image
               alt="Revo Video"
-              src={HomeSectionBimage.data.attributes.formats.large.url}
-              // src="/images/features.png"
+              src={
+                HomeSectionBimage.data.attributes.formats.large.url
+                  ? HomeSectionBimage.data.attributes.formats.large.url
+                  : "/images/features.png"
+              }
               width={1000}
               height={625}
               objectFit="cover"
