@@ -53,6 +53,21 @@ const Sellers = () => {
             />
           </div>
         </Col>
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
+          <ReactPlayer
+            url={
+              data.data[15].attributes.image.data.attributes.url
+                ? data.data[15].attributes.image.data.attributes.url
+                : "/videos/setstudio.mp4"
+            }
+            playing={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            // image="/images/herovideo.jpg"
+          />
+        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -61,7 +76,7 @@ const Sellers = () => {
 
           <p>{data.data[15].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
           <ReactPlayer
             url={
               data.data[15].attributes.image.data.attributes.url
@@ -108,7 +123,7 @@ const Sellers = () => {
 
           <p>{data.data[10].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={
               data.data[10].attributes.image.data.attributes.url
@@ -188,7 +203,7 @@ const Sellers = () => {
             </div>
             <p className="para">{data.data[3].attributes.subHeading}</p>
           </Col>
-          <Col sm={24} md={8} className="onlymobile">
+          <Col sm={24} md={8} className="onlymobile" data-aos="zoom-in">
             <ReactPlayer
               url={
                 data.data[3].attributes.image.data.attributes.url

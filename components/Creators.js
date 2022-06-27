@@ -41,7 +41,7 @@ const Creators = () => {
               url={
                 data.data[8].attributes.image.data.attributes.url
                   ? data.data[8].attributes.image.data.attributes.url
-                  : "/videos/homevideo.mp4"
+                  : "/videos/REVO_video_V3_06_24.m4v"
               }
               playing={true}
               muted={true}
@@ -52,6 +52,45 @@ const Creators = () => {
               className="react-player"
             />
           </div>
+        </Col>
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
+          <Image
+            alt="Revo Video"
+            src={
+              data.data[11].attributes.image.data.attributes.formats.large.url
+                ? data.data[11].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/paymentprocess.png"
+            }
+            width={1000}
+            height={666}
+            objectFit="cover"
+            // quality={100}
+          />
+        </Col>
+        <Col sm={24} md={12} data-aos="fade-up">
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">{data.data[11].attributes.heading}</h1>
+          </div>
+
+          <p className="pright">{data.data[11].attributes.subHeading}</p>
+        </Col>
+
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
+          <Image
+            alt="Revo Video"
+            src={
+              data.data[11].attributes.image.data.attributes.formats.large.url
+                ? data.data[11].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/paymentprocess.png"
+            }
+            width={1000}
+            height={666}
+            objectFit="cover"
+            // quality={100}
+          />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
@@ -107,7 +146,7 @@ const Creators = () => {
 
           <p>{data.data[10].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={
               data.data[10].attributes.image.data.attributes.url
@@ -125,36 +164,6 @@ const Creators = () => {
         </Col>
       </Row>
 
-      <Row
-        className="section-b"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
-        <Col sm={24} md={12} data-aos="fade-up">
-          <div className="iconbar">
-            <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[11].attributes.heading}</h1>
-          </div>
-
-          <p className="pright">{data.data[11].attributes.subHeading}</p>
-        </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
-          <Image
-            alt="Revo Video"
-            src={
-              data.data[11].attributes.image.data.attributes.formats.large.url
-                ? data.data[11].attributes.image.data.attributes.formats.large
-                    .url
-                : "/images/paymentprocess.png"
-            }
-            width={1000}
-            height={666}
-            objectFit="cover"
-            // quality={100}
-          />
-        </Col>
-      </Row>
       <div className="section-center">
         <Row
           className="section-d"
@@ -185,7 +194,7 @@ const Creators = () => {
             </div>
             <p className="para">{data.data[3].attributes.subHeading}</p>
           </Col>
-          <Col sm={24} md={8} className="onlymobile">
+          <Col sm={24} md={8} className="onlymobile" data-aos="zoom-in">
             <ReactPlayer
               url={
                 data.data[3].attributes.image.data.attributes.url
@@ -331,7 +340,7 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      /* margin: 0rem 0 5rem 0; */
+      margin: 5rem 0 0rem 0;
       background: var(--clr-primary-1);
 
       padding: 6rem 4rem;

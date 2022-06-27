@@ -13,7 +13,7 @@ const HomeSectionE = ({ home }) => {
 
   return (
     <Wrapper>
-      <Row gutter={16} justify="center" align="middle">
+      <Row gutter={16} justify="center" align="middle" className="mainsection">
         <Col data-aos="fade-up">
           <h3 className="title">{HomeSectionEheading}</h3>
           <p>{HomeSectionEsubheading}</p>
@@ -29,10 +29,24 @@ const HomeSectionE = ({ home }) => {
 };
 
 const Wrapper = styled.section`
-  background-image: url("/images/Revo_BG_3.png");
-  background-position: center center;
+  background: var(--clr-primary-1);
+  /* background-image: url("/images/Revo_BG_3.png");
+  background-position: -16% 120%;
+  background-repeat: no-repeat;
+  position: relative; */
+  /* background-image: url("/images/Revo_BG_3.png");
+  background-position: center center; */
   margin: 0 auto;
   padding: 6rem 2rem;
+
+  /* .mainsection {
+    background-color: rgba(67, 214, 106, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  } */
 
   .title {
     text-align: center;

@@ -29,10 +29,12 @@ const Home = ({ home }) => {
     <>
       <Meta title="Home" />
       <HomeHero home={home} />
-      <HomeSectionA home={home} />
+
+      {/* <HomeSectionA home={home} />*/}
       <HomeSectionB home={home} />
-      <HomeSectionC home={home} />
+
       <HomeSectionD home={home} />
+      <HomeSectionC home={home} />
       <HomeSectionE home={home} />
     </>
   );

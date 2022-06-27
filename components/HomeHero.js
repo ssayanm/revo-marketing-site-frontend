@@ -14,15 +14,33 @@ const HomeHero = ({ home }) => {
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <article className="content">
-              <h1 className="title">{heading}</h1>
-              <p>{subHeading}</p>
-              <div className="onlymobile">
+              <h1 className="title" style={{ display: "none" }}>
+                {heading}
+              </h1>
+              <p style={{ display: "none" }}>{subHeading}</p>
+              <h1 className="title">
+                The Future of Shopping is Commerce Enabled Content
+              </h1>
+              <h3>
+                Revo Video is an authentic content led marketing and shopping
+                platform.
+              </h3>
+              <p>
+                Omnichannel platform Create shoppable videos once and then
+                distribute across social media networks, embed into websites and
+                content, shop on TV via QR codes and more!
+              </p>
+              <p>
+                Videos are shoppable in both Live and VOD format creating an
+                endless distribution channel with thousands of revenue streams.
+              </p>
+              <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
                       heroVideo.data.attributes.url
                         ? heroVideo.data.attributes.url
-                        : "/videos/homevideo.mp4"
+                        : "/videos/REVO_video_V3_06_24.m4v"
                     }
                     playing={false}
                     muted={true}
@@ -35,15 +53,6 @@ const HomeHero = ({ home }) => {
                 </div>
               </div>
               <div className="btn-section">
-                <Link href="/">
-                  <a
-                    className="btn-alt btn-shopify"
-                    style={{ display: "none" }}
-                  >
-                    {" "}
-                    Add to your shopify store
-                  </a>
-                </Link>
                 <Link href={`/${buttonLink}`}>
                   <a className="btn btn-start"> {buttonText}</a>
                 </Link>

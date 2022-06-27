@@ -41,7 +41,7 @@ const Brands = () => {
               url={
                 data.data[7].attributes.image.data.attributes.url
                   ? data.data[7].attributes.image.data.attributes.url
-                  : "/videos/homevideo.mp4"
+                  : "/videos/REVO_video_V3_06_24.m4v"
               }
               playing={true}
               muted={true}
@@ -53,14 +53,7 @@ const Brands = () => {
             />
           </div>
         </Col>
-        <Col sm={24} md={12} data-aos="fade-up">
-          <div className="iconbar">
-            <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[6].attributes.heading}</h1>
-          </div>
-          <ReactMarkdown children={data.data[6].attributes.subHeading} />
-        </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
           <Image
             alt="Revo Video"
             src={
@@ -71,6 +64,52 @@ const Brands = () => {
             }
             width={1000}
             height={625}
+            objectFit="cover"
+            // quality={100}
+          />
+        </Col>
+        <Col sm={24} md={12} data-aos="fade-up">
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">{data.data[6].attributes.heading}</h1>
+          </div>
+          <ReactMarkdown children={data.data[6].attributes.subHeading} />
+        </Col>
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
+          <Image
+            alt="Revo Video"
+            src={
+              data.data[6].attributes.image.data.attributes.formats.large.url
+                ? data.data[6].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Studio1.png"
+            }
+            width={1000}
+            height={625}
+            objectFit="cover"
+            // quality={100}
+          />
+        </Col>
+
+        <Col sm={24} md={12} data-aos="fade-up">
+          <div className="iconbar">
+            <BsPlayFill className="icon" />
+            <h1 className="title">{data.data[4].attributes.heading}</h1>
+          </div>
+
+          <p>{data.data[4].attributes.subHeading}</p>
+        </Col>
+        <Col sm={24} md={12} data-aos="zoom-in">
+          <Image
+            alt="Revo Video"
+            src={
+              data.data[4].attributes.image.data.attributes.formats.large.url
+                ? data.data[4].attributes.image.data.attributes.formats.large
+                    .url
+                : "/images/Weekly_Schedule.jpg"
+            }
+            width={1000}
+            height={434}
             objectFit="cover"
             // quality={100}
           />
@@ -100,7 +139,7 @@ const Brands = () => {
 
           <p>{data.data[5].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={
               data.data[5].attributes.image.data.attributes.url
@@ -150,51 +189,6 @@ const Brands = () => {
         </Col>
       </Row>
 
-      <Row
-        className="section-b"
-        gutter={[48, 32]}
-        justify="center"
-        align="middle"
-      >
-        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
-          <Image
-            alt="Revo Video"
-            src={
-              data.data[4].attributes.image.data.attributes.formats.large.url
-                ? data.data[4].attributes.image.data.attributes.formats.large
-                    .url
-                : "/images/Weekly_Schedule.jpg"
-            }
-            width={1000}
-            height={434}
-            objectFit="cover"
-            // quality={100}
-          />
-        </Col>
-        <Col sm={24} md={12} data-aos="fade-up">
-          <div className="iconbar">
-            <BsPlayFill className="icon" />
-            <h1 className="title">{data.data[4].attributes.heading}</h1>
-          </div>
-
-          <p>{data.data[4].attributes.subHeading}</p>
-        </Col>
-        <Col sm={24} md={12} className="onlymobile">
-          <Image
-            alt="Revo Video"
-            src={
-              data.data[4].attributes.image.data.attributes.formats.large.url
-                ? data.data[4].attributes.image.data.attributes.formats.large
-                    .url
-                : "/images/Weekly_Schedule.jpg"
-            }
-            width={1000}
-            height={434}
-            objectFit="cover"
-            // quality={100}
-          />
-        </Col>
-      </Row>
       <div className="section-center">
         <Row
           className="section-d"
@@ -258,7 +252,7 @@ const Brands = () => {
 
           <p>{data.data[2].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={
               data.data[2].attributes.image.data.attributes.url
@@ -403,7 +397,7 @@ const Wrapper = styled.section`
     }
 
     .section-d {
-      margin: 0rem 0 5rem 0;
+      margin: 5rem 0 5rem 0;
       background: var(--clr-primary-1);
 
       padding: 6rem 4rem;

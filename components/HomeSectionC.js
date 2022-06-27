@@ -40,8 +40,12 @@ const HomeSectionC = ({ home }) => {
         </Col>
         <Col sm={24} md={16} xl={12} data-aos="fade-up">
           <article className="content">
-            <h3 className="title">{HomeSectionCheading}</h3>
-            <p>{HomeSectionCsubheading}</p>
+            <h3 className="title" style={{ display: "none" }}>
+              {HomeSectionCheading}
+            </h3>
+            <p style={{ display: "none" }}>{HomeSectionCsubheading}</p>
+            <h3 className="title">Shopping is Commerce Enabled Content</h3>
+            <p>We’re putting the power back in the hands of the consumer</p>
 
             <div className="greeniconbar">
               <GoPrimitiveDot className="greendot" />
@@ -64,7 +68,7 @@ const HomeSectionC = ({ home }) => {
 
             <p>{HomeSectionCbulletCdesc}</p>
           </article>
-          <div className="onlymobile">
+          <div className="onlymobile" data-aos="zoom-in">
             <Image
               alt={HomeSectionCheading}
               src={

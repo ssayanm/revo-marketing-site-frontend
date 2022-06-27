@@ -25,7 +25,7 @@ const HomeSectionB = ({ home }) => {
       <div className="section-center">
         <Row gutter={16}>
           <Col data-aos="fade-up">
-            <h3>{HomeSectionBheading}</h3>
+            <h1 className="title">{HomeSectionBheading}</h1>
           </Col>
         </Row>
         <Row gutter={[48, 32]}>
@@ -156,7 +156,7 @@ const Wrapper = styled.section`
   }
 
   h3 {
-    font-size: 2.7rem;
+    /* font-size: 2.7rem; */
   }
 
   .heading {
@@ -168,6 +168,7 @@ const Wrapper = styled.section`
     font-size: 1.2rem;
   }
 
+  h1,
   h3,
   h4 {
     color: var(--clr-white);
@@ -198,7 +199,7 @@ const Wrapper = styled.section`
     }
 
     h3 {
-      font-size: 4.3rem;
+      /* font-size: 4.3rem; */
     }
 
     .heading {

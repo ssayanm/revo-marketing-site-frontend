@@ -41,7 +41,7 @@ const Publishers = () => {
               url={
                 data.data[7].attributes.image.data.attributes.url
                   ? data.data[7].attributes.image.data.attributes.url
-                  : "/videos/homevideo.mp4"
+                  : "/videos/REVO_video_V3_06_24.m4v"
               }
               playing={true}
               muted={true}
@@ -53,6 +53,22 @@ const Publishers = () => {
             />
           </div>
         </Col>
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlydesktop">
+          <ReactPlayer
+            url={
+              data.data[13].attributes.image.data.attributes.url
+                ? data.data[13].attributes.image.data.attributes.url
+                : "/videos/catalog_sync.mp4"
+            }
+            playing={true}
+            muted={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            // image="/images/herovideo.jpg"
+            // quality={100}
+          />
+        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -61,7 +77,7 @@ const Publishers = () => {
 
           <p>{data.data[13].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} data-aos="zoom-in">
+        <Col sm={24} md={12} data-aos="zoom-in" className="onlymobile">
           <ReactPlayer
             url={
               data.data[13].attributes.image.data.attributes.url
@@ -78,21 +94,6 @@ const Publishers = () => {
           />
         </Col>
 
-        <Col sm={24} md={12} className="onlydesktop" data-aos="zoom-in">
-          <Image
-            alt={data.data[13].attributes.heading}
-            src={
-              data.data[4].attributes.image.data.attributes.formats.large.url
-                ? data.data[4].attributes.image.data.attributes.formats.large
-                    .url
-                : "/images/Weekly_Schedule.jpg"
-            }
-            width={1000}
-            height={434}
-            objectFit="cover"
-            // quality={100}
-          />
-        </Col>
         <Col sm={24} md={12} data-aos="fade-up">
           <div className="iconbar">
             <BsPlayFill className="icon" />
@@ -101,9 +102,9 @@ const Publishers = () => {
 
           <p>{data.data[4].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} data-aos="zoom-in">
           <Image
-            alt={data.data[4].attributes.heading}
+            alt={data.data[13].attributes.heading}
             src={
               data.data[4].attributes.image.data.attributes.formats.large.url
                 ? data.data[4].attributes.image.data.attributes.formats.large
@@ -180,7 +181,7 @@ const Publishers = () => {
           </div>
           <p>{data.data[2].attributes.subHeading}</p>
         </Col>
-        <Col sm={24} md={12} className="onlymobile">
+        <Col sm={24} md={12} className="onlymobile" data-aos="zoom-in">
           <ReactPlayer
             url={
               data.data[2].attributes.image.data.attributes.url
