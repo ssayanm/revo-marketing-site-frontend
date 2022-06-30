@@ -365,10 +365,10 @@ const Wrapper = styled.section`
         font-size: 1.3rem;
       }
       .btnn {
-        position: absolute;
-        right: 0;
-        bottom: 3rem;
-        left: 0;
+        /* position: absolute; */
+        /* right: 0; */
+        /* bottom: 3rem; */
+        /* left: 0; */
       }
     }
 
