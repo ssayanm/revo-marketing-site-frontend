@@ -26,11 +26,18 @@ const HomeHero = ({ home }) => {
                 platform.
               </h3>
               <p>
+                Create shoppable videos once and then distribute across social
+                media networks, embed into websites and content, shop on TV via
+                QR codes and more! Content is always shoppable in both Live and
+                VOD format creating an endless distribution channel across all
+                major platforms creating thousands of new revenue streams.
+              </p>
+              <p style={{ display: "none" }}>
                 Omnichannel platform Create shoppable videos once and then
                 distribute across social media networks, embed into websites and
                 content, shop on TV via QR codes and more!
               </p>
-              <p>
+              <p style={{ display: "none" }}>
                 Videos are always shoppable in both Live and VOD format creating
                 an endless distribution channel across all major platforms
                 creating thousands of new revenue streams.
