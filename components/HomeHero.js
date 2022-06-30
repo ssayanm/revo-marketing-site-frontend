@@ -31,8 +31,9 @@ const HomeHero = ({ home }) => {
                 content, shop on TV via QR codes and more!
               </p>
               <p>
-                Videos are shoppable in both Live and VOD format creating an
-                endless distribution channel with thousands of revenue streams.
+                Videos are always shoppable in both Live and VOD format creating
+                an endless distribution channel across all major platforms
+                creating thousands of new revenue streams.
               </p>
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
