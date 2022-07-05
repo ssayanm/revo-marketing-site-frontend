@@ -13,7 +13,7 @@ const HomeSectionE = ({ home }) => {
 
   return (
     <Wrapper>
-      <Row gutter={16} justify="center" align="middle" className="mainsection">
+      <Row gutter={16} justify="center" align="middle">
         <Col data-aos="fade-up">
           <h3 className="title">{HomeSectionEheading}</h3>
           <p>{HomeSectionEsubheading}</p>
@@ -38,15 +38,6 @@ const Wrapper = styled.section`
   background-position: center center; */
   margin: 0 auto;
   padding: 6rem 2rem;
-
-  /* .mainsection {
-    background-color: rgba(67, 214, 106, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  } */
 
   .title {
     text-align: center;

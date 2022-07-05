@@ -5,7 +5,7 @@ import { social } from "../utils/constants";
 import ReactPlayer from "react-player/lazy";
 
 const HomeHero = ({ home }) => {
-  const { heading, subHeading, heroVideo, buttonText, buttonLink } =
+  const { heading, subHeading, heroVideo, heroPara, buttonText, buttonLink } =
     home.data.attributes;
 
   return (
@@ -14,18 +14,17 @@ const HomeHero = ({ home }) => {
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <article className="content">
+              <h1 className="title">{heading}</h1>
+              <h3>{subHeading}</h3>
+              <p>{heroPara}</p>
               <h1 className="title" style={{ display: "none" }}>
-                {heading}
-              </h1>
-              <p style={{ display: "none" }}>{subHeading}</p>
-              <h1 className="title">
                 The Future of Shopping is Commerce Enabled Content
               </h1>
-              <h3>
+              <h3 style={{ display: "none" }}>
                 Revo Video is an authentic content led marketing and shopping
                 platform.
               </h3>
-              <p>
+              <p style={{ display: "none" }}>
                 Create shoppable videos once and then distribute across social
                 media networks, embed into websites and content, shop on TV via
                 QR codes and more! Content is always shoppable in both Live and
