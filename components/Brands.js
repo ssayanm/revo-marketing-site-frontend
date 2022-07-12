@@ -60,7 +60,7 @@ const Brands = () => {
               data.data[6].attributes.image.data.attributes.formats.large.url
                 ? data.data[6].attributes.image.data.attributes.formats.large
                     .url
-                : "/images/Studio1.png"
+                : "/images/easytouse.jpg"
             }
             width={1000}
             height={625}
@@ -82,7 +82,7 @@ const Brands = () => {
               data.data[6].attributes.image.data.attributes.formats.large.url
                 ? data.data[6].attributes.image.data.attributes.formats.large
                     .url
-                : "/images/Studio1.png"
+                : "/images/easytouse.jpg"
             }
             width={1000}
             height={625}

@@ -20,9 +20,9 @@ const HomeSectionC = ({ home }) => {
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
-        <Col sm={24} md={16} xl={12} data-aos="zoom-in">
+        <Col sm={24} md={16} xl={10} data-aos="zoom-in">
           <div className="onlydesktop">
-            <Image
+            {/* <Image
               alt={HomeSectionCheading}
               src={
                 HomeSectionCimage.data.attributes.formats.large.url
@@ -35,10 +35,22 @@ const HomeSectionC = ({ home }) => {
               quality={100}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
-            />
+            />*/}
+            <center>
+              <Image
+                alt={HomeSectionCheading}
+                src="/images/homesectiond.jpg"
+                width={800}
+                height={800}
+                objectFit="cover"
+                quality={100}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
+              />
+            </center>
           </div>
         </Col>
-        <Col sm={24} md={16} xl={12} data-aos="fade-up">
+        <Col sm={24} md={16} xl={14} data-aos="fade-up">
           <article className="content">
             <h3 className="title" style={{ display: "none" }}>
               {HomeSectionCheading}
