@@ -25,9 +25,9 @@ const HomeSectionC = ({ home }) => {
             <Image
               alt={HomeSectionCheading}
               src={
-                HomeSectionCimage.data.attributes.formats.large.url
-                  ? HomeSectionCimage.data.attributes.formats.large.url
-                  : "/images/homesectiond.jpg"
+                HomeSectionCimage.data.attributes.formats.large.urla
+                  ? HomeSectionCimage.data.attributes.formats.large.urla
+                  : "/images/homesectiond.png"
               }
               width={1000}
               height={1000}
@@ -68,12 +68,12 @@ const HomeSectionC = ({ home }) => {
             <Image
               alt={HomeSectionCheading}
               src={
-                HomeSectionCimage.data.attributes.formats.large.url
-                  ? HomeSectionCimage.data.attributes.formats.large.url
-                  : "/images/Revo_image_homepage_Section_3.png"
+                HomeSectionCimage.data.attributes.formats.large.urla
+                  ? HomeSectionCimage.data.attributes.formats.large.urla
+                  : "/images/homesectiond.png"
               }
               width={1000}
-              height={625}
+              height={1000}
               objectFit="cover"
               quality={100}
               placeholder="blur"
