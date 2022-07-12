@@ -20,44 +20,28 @@ const HomeSectionC = ({ home }) => {
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
-        <Col sm={24} md={16} xl={10} data-aos="zoom-in">
+        <Col sm={24} md={16} xl={12} data-aos="zoom-in">
           <div className="onlydesktop">
-            {/* <Image
+            <Image
               alt={HomeSectionCheading}
               src={
                 HomeSectionCimage.data.attributes.formats.large.url
                   ? HomeSectionCimage.data.attributes.formats.large.url
-                  : "/images/Revo_image_homepage_Section_3.png"
+                  : "/images/homesectiond.jpg"
               }
               width={1000}
-              height={625}
+              height={1000}
               objectFit="cover"
               quality={100}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
-            />*/}
-            <center>
-              <Image
-                alt={HomeSectionCheading}
-                src="/images/homesectiond.jpg"
-                width={800}
-                height={800}
-                objectFit="cover"
-                quality={100}
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNsfrG0HgAGlwKRsbTehgAAAABJRU5ErkJggg=="
-              />
-            </center>
+            />
           </div>
         </Col>
-        <Col sm={24} md={16} xl={14} data-aos="fade-up">
+        <Col sm={24} md={16} xl={12} data-aos="fade-up">
           <article className="content">
-            <h3 className="title" style={{ display: "none" }}>
-              {HomeSectionCheading}
-            </h3>
-            <p style={{ display: "none" }}>{HomeSectionCsubheading}</p>
-            <h3 className="title">Shopping is Commerce Enabled Content</h3>
-            <p>We’re putting the power back in the hands of the consumer</p>
+            <h3 className="title">{HomeSectionCheading}</h3>
+            <p>{HomeSectionCsubheading}</p>
 
             <div className="greeniconbar">
               <GoPrimitiveDot className="greendot" />
