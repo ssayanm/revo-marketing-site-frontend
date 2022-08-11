@@ -1,11 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FaLinkedin, FaPlay } from "react-icons/fa";
 import styled from "styled-components";
-import { footerLinks, footerLinksAlt, social } from "../utils/constants";
+import useSWR from "swr";
+import Loading from "./Loading";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Footer = () => {
+  const { data, error } = useSWR(
+    `${process.env.url}/api/footer-links?populate=*`,
+    fetcher
+  );
+
+  // {
+  //   console.log(data.data[1].attributes.text);
+  // }
+
+  if (error) return <div>Failed to load</div>;
+  if (!data)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   return (
     <Wrapper>
       <div className="foot">
@@ -29,76 +47,66 @@ const Footer = () => {
 
         <div>
           <ul className="nav-links">
-            {footerLinks.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a>{text}</a>
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link href={data.data[0].attributes.url}>
+                <a target="_blank">{data.data[0].attributes.text}</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={data.data[1].attributes.url}>
+                <a target="_blank">{data.data[1].attributes.text}</a>
+              </Link>
+            </li>
           </ul>
           <ul className="social-icons onlymobile">
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a href={url} target="_blank">
-                      {icon}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link href={data.data[4].attributes.url}>
+                <a target="_blank">
+                  <FaLinkedin className="social-icon "></FaLinkedin>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="onlymobile">
           <ul className="nav-links">
-            {footerLinksAlt.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a>{text}</a>
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link href={data.data[2].attributes.url}>
+                <a>{data.data[2].attributes.text}</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={data.data[3].attributes.url}>
+                <a>{data.data[3].attributes.text}</a>
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div className="onlydesktop">
           <ul className="nav-links">
-            {footerLinksAlt.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a>{text}</a>
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link href={data.data[2].attributes.url}>
+                <a>{data.data[2].attributes.text}</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={data.data[3].attributes.url}>
+                <a>{data.data[3].attributes.text}</a>
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div className="onlydesktop">
           <ul className="social-icons">
-            {social.map((socialIcon) => {
-              const { id, url, icon } = socialIcon;
-              return (
-                <li key={id}>
-                  <Link href={url}>
-                    <a href={url} target="_blank">
-                      {icon}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+            <li>
+              <Link href={data.data[4].attributes.url}>
+                <a target="_blank">
+                  <FaLinkedin className="social-icon "></FaLinkedin>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <center>

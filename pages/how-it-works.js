@@ -5,7 +5,6 @@ const HowItWorks = () => {
   return (
     <>
       <Meta title="How It Works" />
-
       <Categories />
     </>
   );

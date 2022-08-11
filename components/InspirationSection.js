@@ -4,9 +4,9 @@ import { Row, Col } from "antd";
 import Link from "next/link";
 
 const InspirationSection = ({ channels }) => {
-  const featuredChannels1 = channels.data.map(
-    (items) => items.attributes.title
-  );
+  // const featuredChannels1 = channels.data.map(
+  //   (items) => items.attributes.title
+  // );
 
   return (
     <Wrapper>

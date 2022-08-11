@@ -6,11 +6,27 @@ import { links } from "../utils/constants";
 import { BsPlayCircleFill } from "react-icons/bs";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styled from "styled-components";
+import useSWR from "swr";
+import Loading from "./Loading";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Nav = () => {
+  const { data, error } = useSWR(
+    `${process.env.url}/api/header-links?populate=*`,
+    fetcher
+  );
   const router = useRouter();
 
   const [toggle, setToggle] = useState(false);
+
+  if (error) return <div>Failed to load</div>;
+  if (!data)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
 
   return (
     <NavContainer
@@ -69,10 +85,9 @@ const Nav = () => {
                   <FaTimes />
                 </button>
               </div>
-
               <ul className="links">
-                {links.map((link) => {
-                  const { id, url, text } = link;
+                {data.data.map((link, id) => {
+                  const { url, text } = link.attributes;
                   return (
                     <li key={id}>
                       <Link href={url}>
@@ -87,8 +102,8 @@ const Nav = () => {
           </SidebarContainer>
         ) : (
           <ul className="nav-links">
-            {links.map((link) => {
-              const { id, url, text } = link;
+            {data.data.map((link, id) => {
+              const { url, text } = link.attributes;
               return (
                 <li key={id}>
                   <Link href={url}>
