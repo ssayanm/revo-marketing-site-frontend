@@ -1,5 +1,4 @@
-import { FaApple, FaShopify, FaLinkedin } from "react-icons/fa";
-import { GrAndroid } from "react-icons/gr";
+import { FaLinkedin } from "react-icons/fa";
 import Brands from "../components/Brands";
 import Creators from "../components/Creators";
 import Sellers from "../components/Sellers";
@@ -33,13 +32,13 @@ export const footerLinks = [
   {
     id: 2,
     text: "Studio Login",
-    url: "https://studio.revo.video/#/login2",
+    url: "https://revovideo.com/auth",
   },
 
   {
     id: 4,
     text: "Careers",
-    url: "https://jobs.wrk.xyz/borderFee",
+    url: "https://jobs.polymer.co/borderfree",
   },
 ];
 
