@@ -1,7 +1,7 @@
 import axios from "axios";
 import Meta from "../components/Meta";
 import HomeHero from "../components/HomeHero";
-import HomeSectionA from "../components/HomeSectionA";
+// import HomeSectionA from "../components/HomeSectionA";
 import HomeSectionB from "../components/HomeSectionB";
 import HomeSectionC from "../components/HomeSectionC";
 import HomeSectionD from "../components/HomeSectionD";
@@ -29,10 +29,7 @@ const Home = ({ home }) => {
     <>
       <Meta title="Home" />
       <HomeHero home={home} />
-
-      {/* <HomeSectionA home={home} />*/}
       <HomeSectionB home={home} />
-
       <HomeSectionD home={home} />
       <HomeSectionC home={home} />
       <HomeSectionE home={home} />

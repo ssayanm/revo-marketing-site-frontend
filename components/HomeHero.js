@@ -1,8 +1,11 @@
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import Link from "next/link";
-import { social } from "../utils/constants";
-import ReactPlayer from "react-player/lazy";
+
+// import ReactPlayer from "react-player/lazy";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const HomeHero = ({ home }) => {
   const { heading, subHeading, heroVideo, heroPara, buttonText, buttonLink } =
@@ -13,34 +16,11 @@ const HomeHero = ({ home }) => {
       <div className="section-center">
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
-            <article className="content">
+            <div className="content">
               <h1 className="title">{heading}</h1>
               <h3>{subHeading}</h3>
               <p>{heroPara}</p>
-              <h1 className="title" style={{ display: "none" }}>
-                The Future of Shopping is Commerce Enabled Content
-              </h1>
-              <h3 style={{ display: "none" }}>
-                Revo Video is an authentic content led marketing and shopping
-                platform.
-              </h3>
-              <p style={{ display: "none" }}>
-                Create shoppable videos once and then distribute across social
-                media networks, embed into websites and content, shop on TV via
-                QR codes and more! Content is always shoppable in both Live and
-                VOD format creating an endless distribution channel across all
-                major platforms creating thousands of new revenue streams.
-              </p>
-              <p style={{ display: "none" }}>
-                Omnichannel platform Create shoppable videos once and then
-                distribute across social media networks, embed into websites and
-                content, shop on TV via QR codes and more!
-              </p>
-              <p style={{ display: "none" }}>
-                Videos are always shoppable in both Live and VOD format creating
-                an endless distribution channel across all major platforms
-                creating thousands of new revenue streams.
-              </p>
+
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
@@ -64,23 +44,7 @@ const HomeHero = ({ home }) => {
                   <a className="btn btn-start"> {buttonText}</a>
                 </Link>
               </div>
-
-              <p className="smallfont" style={{ display: "none" }}>
-                Available now on all platforms
-              </p>
-              <ul className="social-icons" style={{ display: "none" }}>
-                {social.map((socialIcon) => {
-                  const { id, url, icon } = socialIcon;
-                  return (
-                    <li key={id}>
-                      <a href={url} target="_blank">
-                        {icon}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </article>
+            </div>
           </Col>
           <Col sm={24} md={24} lg={12} data-aos="zoom-in">
             <div className="onlydesktop">
