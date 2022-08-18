@@ -22,9 +22,9 @@ module.exports = async (phase, { defaultConfig }) => {
   const nextConfig = {
     /* config options here */
     images: {
-      domains: ["localhost", "res.cloudinary.com", ""],
-      loader: "akamai",
-      path: "",
+      domains: ["localhost", "res.cloudinary.com"],
+      // loader: "akamai",
+      // path: "",
     },
     env: {
       url: url,
