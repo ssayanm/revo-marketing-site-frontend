@@ -5,27 +5,9 @@ import "antd/dist/antd.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// import { useRouter } from "next/router";
-// import Loading from "../components/Loading";
+import Script from "next/script";
 
 const MyApp = ({ Component, pageProps }) => {
-  // const router = useRouter();
-
-  // const [pageLoading, setPageLoading] = useState(false);
-  // useEffect(() => {
-  //   const handleStart = () => {
-  //     setPageLoading(true);
-  //   };
-  //   const handleComplete = () => {
-  //     setPageLoading(false);
-  //   };
-
-  //   router.events.on("routeChangeStart", handleStart);
-  //   router.events.on("routeChangeComplete", handleComplete);
-  //   router.events.on("routeChangeError", handleComplete);
-  // }, [router]);
-
   useEffect(() => {
     AOS.init({
       // easing: "ease-out-cubic",
@@ -37,6 +19,22 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
   return (
     <Layout>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
       <Component {...pageProps} />
     </Layout>
   );
