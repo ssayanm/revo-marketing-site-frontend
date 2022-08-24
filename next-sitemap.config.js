@@ -8,5 +8,5 @@
 module.exports = {
   siteUrl: "https://www.revovideo.com",
   generateRobotsTxt: true, // (optional)
-  // ...other options
+  sitemapSize: 7000,
 };
