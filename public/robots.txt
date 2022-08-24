@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.revovideo.com
+
+# Sitemaps
+Sitemap: https://www.revovideo.com/sitemap.xml
