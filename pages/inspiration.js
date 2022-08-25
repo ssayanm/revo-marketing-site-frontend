@@ -5,7 +5,7 @@ import axios from "axios";
 export const getStaticProps = async () => {
   try {
     const res = await axios.get(
-      `${process.env.url}/api/featured-channels/?populate=*`
+      `${process.env.url}/api/featured-channels/?sort[position]=ASC&populate=*`
     );
 
     const channels = res.data;
