@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { Row, Col } from "antd";
-import Link from "next/link";
 
 const InspirationSection = ({ channels }) => {
   // const featuredChannels1 = channels.data.map(

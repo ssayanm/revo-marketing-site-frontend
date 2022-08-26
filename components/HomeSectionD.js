@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { BsPlayCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { Row, Col } from "antd";

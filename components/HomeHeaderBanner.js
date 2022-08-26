@@ -1,32 +1,15 @@
 import styled from "styled-components";
 
 const HomeHeaderBanner = ({ home }) => {
-  const { headerBanner } = home.data.attributes;
+  const { headerBanner, headerBannerText } = home.data.attributes;
 
   return (
     <Wrapper>
       {headerBanner ? (
         <div
-          id="banner"
-          className="d-flex justify-content-center py-4 text-center"
-        >
-          <span className="mx-2">
-            <strong>Partnership with ReachTV:</strong>
-          </span>
-          <span>
-            {" "}
-            Giving Revo Video access to more than 40 million consumers.{" "}
-            <strong>
-              <a
-                className="text-light"
-                href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
-                target="_blank"
-              >
-                Read the coverage
-              </a>
-            </strong>
-          </span>
-        </div>
+          dangerouslySetInnerHTML={{ __html: headerBannerText }}
+          className="banner"
+        ></div>
       ) : (
         ""
       )}
@@ -35,9 +18,12 @@ const HomeHeaderBanner = ({ home }) => {
 };
 
 const Wrapper = styled.section`
-  padding: 0.5rem;
-  background: var(--clr-black);
-  color: var(--clr-white);
+  .banner {
+    padding: 0.5rem;
+    background: var(--clr-black);
+    text-align: center;
+    color: var(--clr-white);
+  }
 
   a {
     color: var(--clr-white);
@@ -45,3 +31,5 @@ const Wrapper = styled.section`
 `;
 
 export default HomeHeaderBanner;
+
+/***Partnership with ReachTV:** Giving Revo Video access to more than 40 million consumers. **[Read the coverage](https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click&target=_blank)** */
