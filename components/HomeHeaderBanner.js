@@ -15,7 +15,7 @@ const HomeHeaderBanner = ({ home }) => {
           </span>
           <span>
             {" "}
-            Giving Revo Video access to more than 40 million consumers.
+            Giving Revo Video access to more than 40 million consumers.{" "}
             <strong>
               <a
                 className="text-light"
@@ -36,6 +36,12 @@ const HomeHeaderBanner = ({ home }) => {
 
 const Wrapper = styled.section`
   padding: 0.5rem;
+  background: var(--clr-black);
+  color: var(--clr-white);
+
+  a {
+    color: var(--clr-white);
+  }
 `;
 
 export default HomeHeaderBanner;
