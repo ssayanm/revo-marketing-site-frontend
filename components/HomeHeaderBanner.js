@@ -31,5 +31,3 @@ const Wrapper = styled.section`
 `;
 
 export default HomeHeaderBanner;
-
-/***Partnership with ReachTV:** Giving Revo Video access to more than 40 million consumers. **[Read the coverage](https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click&target=_blank)** */

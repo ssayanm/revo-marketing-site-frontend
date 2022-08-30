@@ -37,6 +37,7 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #232323;
   --clr-light: #7f7f7f;
+  --clr-light-alt: #dddcdc;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 1.5rem;
