@@ -13,7 +13,7 @@ const InspirationSection = ({ channels }) => {
         <div className="content">
           <h3 className="title">Featured Channels</h3>
         </div>
-        <Row gutter={[32, 24]} justify="center" align="middle">
+        <Row gutter={[32, 24]}>
           {channels.data.map((channel) => {
             const { title, subTitle, link, image } = channel.attributes;
             return (
@@ -83,7 +83,7 @@ const Wrapper = styled.section`
 
   .textBox {
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     text-align: center;
     h4,
     h5 {
