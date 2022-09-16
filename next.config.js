@@ -8,8 +8,8 @@ module.exports = async (phase, { defaultConfig }) => {
     /* config options here */
     images: {
       domains: ["localhost", "res.cloudinary.com", "cms.revovideo.com"],
-      loader: "default",
-      path: "/_next/image",
+      loader: "akamai",
+      path: "",
     },
     env: {
       url: url,
