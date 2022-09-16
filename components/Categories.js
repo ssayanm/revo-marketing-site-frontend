@@ -4,7 +4,7 @@ import { categories } from "../utils/constants";
 import Select from "react-select";
 import { Tabs } from "antd";
 
-const { TabPane } = Tabs;
+const { Items } = Tabs;
 
 function callback(key) {
   // console.log(key);
@@ -45,9 +45,9 @@ const Categories = () => {
         {categories.map((link, index) => {
           const { id, text, components } = link;
           return (
-            <TabPane tab={text} key={id}>
+            <Items tab={text} key={id}>
               {components}
-            </TabPane>
+            </Items>
           );
         })}
       </Tabs>
