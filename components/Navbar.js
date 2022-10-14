@@ -86,8 +86,18 @@ const Nav = () => {
                 </button>
               </div>
               <ul className="links">
-                {data.data.map((link, id) => {
+                {/*data.data.map((link, id) => {
                   const { url, text } = link.attributes;
+                  return (
+                    <li key={id}>
+                      <Link href={url}>
+                        <a onClick={() => setToggle(!toggle)}>{text}</a>
+                      </Link>
+                    </li>
+                  );
+                })*/}
+                {links.map((link, id) => {
+                  const { url, text } = link;
                   return (
                     <li key={id}>
                       <Link href={url}>
@@ -102,8 +112,21 @@ const Nav = () => {
           </SidebarContainer>
         ) : (
           <ul className="nav-links">
-            {data.data.map((link, id) => {
+            {/*data.data.map((link, id) => {
               const { url, text } = link.attributes;
+              return (
+                <li key={id}>
+                  <Link href={url}>
+                    <a className={router.pathname === url ? "active" : "home"}>
+                      {text}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })*/}
+
+            {links.map((link, id) => {
+              const { url, text } = link;
               return (
                 <li key={id}>
                   <Link href={url}>

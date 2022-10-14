@@ -223,11 +223,11 @@ const Wrapper = styled.section`
       line-height: 1.1;
     }
     .header {
-      font-size: 30px;
+      font-size: 2rem;
     }
 
     .info {
-      font-size: 25px;
+      font-size: 1.6rem;
     }
   }
 `;

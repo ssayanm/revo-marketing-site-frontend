@@ -100,6 +100,7 @@ const Wrapper = styled.section`
     padding: 2rem 0.75rem;
 
     a {
+      font-family: "MontSemiBold", sans-serif;
       color: var(--clr-black);
       :hover {
         color: var(--clr-primary-1);

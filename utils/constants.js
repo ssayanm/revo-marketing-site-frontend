@@ -15,16 +15,16 @@ export const links = [
     url: "/how-it-works",
   },
 
-  {
-    id: 4,
-    text: "Inspiration",
-    url: "/inspiration",
-  },
-  {
-    id: 5,
-    text: "Pricing",
-    url: "/pricing",
-  },
+  // {
+  //   id: 4,
+  //   text: "Inspiration",
+  //   url: "/inspiration",
+  // },
+  // {
+  //   id: 5,
+  //   text: "Pricing",
+  //   url: "/pricing",
+  // },
   {
     id: 6,
     text: "Get Started",

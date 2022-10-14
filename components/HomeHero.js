@@ -24,10 +24,10 @@ const HomeHero = ({ home }) => {
               <h1 className="title">
                 The most robust video shopping solution, period.
               </h1>
-              <h3>
+              <p>
                 VOD, Live & 1:1 all with one-click pay. Get more sales and
                 conversions with Revo.
-              </h3>
+              </p>
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
@@ -57,18 +57,18 @@ const HomeHero = ({ home }) => {
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer
-                  url={
-                    heroVideo.data.attributes.url
-                      ? heroVideo.data.attributes.url
-                      : "/videos/homevideo.mp4"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  // image="/images/herovideo.jpg"
+                // url={
+                //   heroVideo.data.attributes.url
+                //     ? heroVideo.data.attributes.url
+                //     : "/videos/homevideo.mp4"
+                // }
+                // playing={true}
+                // muted={true}
+                // controls={true}
+                // width="100%"
+                // height="100%"
+                // className="react-player"
+                // image="/images/herovideo.jpg"
                 />
               </div>
             </div>
