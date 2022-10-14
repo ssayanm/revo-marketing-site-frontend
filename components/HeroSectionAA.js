@@ -227,7 +227,7 @@ const Wrapper = styled.section`
     }
 
     .info {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
     }
   }
 `;
