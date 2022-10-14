@@ -170,7 +170,7 @@ const Wrapper = styled.section`
 
     .info {
       margin-top: 1rem;
-      font-size: 1.6rem;
+      font-size: 1.75rem;
     }
   }
 `;
