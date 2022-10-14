@@ -15,8 +15,11 @@ const HomeSectionE = ({ home }) => {
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col data-aos="fade-up">
-          <h3 className="title">{HomeSectionEheading}</h3>
-          <p>{HomeSectionEsubheading}</p>
+          {/* <h3 className="title">{HomeSectionEheading}</h3>
+  <p>{HomeSectionEsubheading}</p>*/}
+          <h3 className="title">
+            Unleash the power of social selling <br></br>anywhere and everywhere
+          </h3>
           <center>
             <Link href={`/${HomeSectionEbuttonLink}`}>
               <a className="btn"> {HomeSectionEbutton}</a>

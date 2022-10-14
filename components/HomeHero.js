@@ -17,10 +17,17 @@ const HomeHero = ({ home }) => {
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <div className="content">
-              <h1 className="title">{heading}</h1>
+              {/*<h1 className="title">{heading}</h1>
               <h3>{subHeading}</h3>
-              <p>{heroPara}</p>
+              <p>{heroPara}</p>*/}
 
+              <h1 className="title">
+                The most robust video shopping solution, period.
+              </h1>
+              <h3>
+                VOD, Live & 1:1 all with one-click pay. Get more sales and
+                conversions with Revo.
+              </h3>
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
@@ -48,7 +55,7 @@ const HomeHero = ({ home }) => {
           </Col>
           <Col sm={24} md={24} lg={12} data-aos="zoom-in">
             <div className="onlydesktop">
-              <div className="player-wrapper">
+              {/* <div className="player-wrapper">
                 <ReactPlayer
                   url={
                     heroVideo.data.attributes.url
@@ -63,7 +70,7 @@ const HomeHero = ({ home }) => {
                   className="react-player"
                   // image="/images/herovideo.jpg"
                 />
-              </div>
+                </div>*/}
             </div>
           </Col>
         </Row>

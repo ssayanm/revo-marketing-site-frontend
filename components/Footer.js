@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaPlay } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaPlay,
+} from "react-icons/fa";
 import styled from "styled-components";
 import useSWR from "swr";
 import Loading from "./Loading";
@@ -66,6 +72,20 @@ const Footer = () => {
                 </a>
               </Link>
             </li>
+            <li>
+              <Link href="https://www.facebook.com/revovideo">
+                <a target="_blank">
+                  <FaFacebookSquare className="social-icon "></FaFacebookSquare>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/revovideo/">
+                <a target="_blank">
+                  <FaInstagramSquare className="social-icon "></FaInstagramSquare>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="onlymobile">
@@ -104,6 +124,20 @@ const Footer = () => {
               <Link href={data.data[4].attributes.url}>
                 <a target="_blank">
                   <FaLinkedin className="social-icon "></FaLinkedin>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.facebook.com/revovideo">
+                <a target="_blank">
+                  <FaFacebookSquare className="social-icon "></FaFacebookSquare>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.instagram.com/revovideo/">
+                <a target="_blank">
+                  <FaInstagramSquare className="social-icon "></FaInstagramSquare>
                 </a>
               </Link>
             </li>
@@ -189,6 +223,9 @@ const Wrapper = styled.footer`
         color: var(--clr-white);
         font-size: 1.2rem;
       }
+    }
+    .social-icons li {
+      margin: 0.5rem 0.5rem;
     }
   }
 `;
