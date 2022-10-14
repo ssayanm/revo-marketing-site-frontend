@@ -3,6 +3,10 @@ import Brands from "../components/Brands";
 import Creators from "../components/Creators";
 import Sellers from "../components/Sellers";
 import Publishers from "../components/Publishers";
+import DtcBrands from "../components/DtcBrands";
+import ContentCreators from "../components/ContentCreators";
+import MediaOutlets from "../components/MediaOutlets";
+import Enterprises from "../components/Enterprises";
 
 export const links = [
   {
@@ -60,6 +64,37 @@ export const social = [
     id: 1,
     icon: <FaLinkedin className="social-icon "></FaLinkedin>,
     url: "https://www.linkedin.com/company/revo-video/",
+  },
+];
+
+export const homeCategories = [
+  {
+    id: 1,
+    text: "DTC Brands",
+    label: "DTC Brands",
+    url: "/",
+    components: <DtcBrands />,
+  },
+  {
+    id: 2,
+    text: "Content  Creators",
+    label: "Content  Creators",
+    url: "/",
+    components: <ContentCreators />,
+  },
+  {
+    id: 3,
+    text: "Media Outlets",
+    label: "Media Outlets",
+    url: "/",
+    components: <MediaOutlets />,
+  },
+  {
+    id: 4,
+    text: "Enterprises",
+    label: "Enterprises",
+    url: "/",
+    components: <Enterprises />,
   },
 ];
 

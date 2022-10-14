@@ -11,6 +11,8 @@ import HomeHeaderBanner from "../components/HomeHeaderBanner";
 import HomeSectionAA from "../components/HeroSectionAA";
 import HomeSectionBB from "../components/HomeSectionBB";
 import HomeSectionDD from "../components/HomeSectionDD";
+import DtcBrands from "../components/DtcBrands";
+import HomeCategories from "../components/HomeCategories";
 
 export const getStaticProps = async () => {
   try {
@@ -36,6 +38,8 @@ const Home = ({ home }) => {
       <HomeHero home={home} />
       <HomeSectionAA home={home} />
       <HomeSectionBB home={home} />
+      <HomeCategories />
+
       <HomeSectionDD home={home} />
       {/* <HomeSectionB home={home} />*/}
       {/*<HomeSectionD home={home} />

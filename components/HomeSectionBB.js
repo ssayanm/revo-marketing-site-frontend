@@ -35,7 +35,7 @@ const HomeSectionBB = ({ home }) => {
               <p className="header">CONNECT</p>
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/400"
                 width={400}
                 height={400}
                 objectFit="contain"
@@ -53,7 +53,7 @@ const HomeSectionBB = ({ home }) => {
               <p className="header">CREATE</p>
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/400"
                 width={400}
                 height={400}
                 objectFit="contain"
@@ -69,7 +69,7 @@ const HomeSectionBB = ({ home }) => {
               <p className="header">PUBLISH</p>
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/400"
                 width={400}
                 height={400}
                 objectFit="contain"
@@ -169,6 +169,7 @@ const Wrapper = styled.section`
     }
 
     .info {
+      margin-top: 1rem;
       font-size: 25px;
     }
   }

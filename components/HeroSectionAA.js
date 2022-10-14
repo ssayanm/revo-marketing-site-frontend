@@ -37,7 +37,7 @@ const HomeSectionAA = ({ home }) => {
 
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/500"
                 width={600}
                 height={559}
                 objectFit="contain"
@@ -50,7 +50,7 @@ const HomeSectionAA = ({ home }) => {
                 </Link>
               </div>
             </Col>
-            <Col sm={24} md={12} xl={8}>
+            <Col sm={24} md={12} xl={8} className="colspace">
               <p className="circle">2</p>
               <p className="header">Live Shopping</p>
               <p className="info">
@@ -58,7 +58,7 @@ const HomeSectionAA = ({ home }) => {
               </p>
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/500"
                 width={600}
                 height={559}
                 objectFit="contain"
@@ -73,7 +73,7 @@ const HomeSectionAA = ({ home }) => {
               {/* <p className="header">{HomeSectionDbulletB}</p>
             <p className="info">{HomeSectionDbulletBdesc}</p>*/}
             </Col>
-            <Col sm={24} md={12} xl={8}>
+            <Col sm={24} md={12} xl={8} className="colspace">
               <p className="circle">3</p>
               <p className="header">1:1 Video Shopping</p>
               <p className="info">
@@ -81,7 +81,7 @@ const HomeSectionAA = ({ home }) => {
               </p>
               <Image
                 alt="revovideo"
-                src="/images/Virtual_try_on.png"
+                src="https://via.placeholder.com/500"
                 width={600}
                 height={559}
                 objectFit="contain"
@@ -105,11 +105,11 @@ const HomeSectionAA = ({ home }) => {
 
 const Wrapper = styled.section`
   /* min-height: 50vh; */
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 4rem;
   background: var(--clr-black);
   /* background-image: url("/images/circle.png"); */
   /* background-repeat: no-repeat; */
-  padding: 6rem 2rem;
+  /* padding: 6rem 2rem; */
   margin: 0 auto;
   text-align: center;
 
@@ -140,6 +140,7 @@ const Wrapper = styled.section`
     &:hover {
       color: var(--clr-primary-1);
       /* background: var(--clr-white); */
+      border-bottom: 1px solid var(--clr-primary-1);
     }
   }
 
@@ -148,11 +149,11 @@ const Wrapper = styled.section`
   }
 
   .icon {
-    width: 64px;
+    /* width: 64px;
     height: 64px;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; */
   }
 
   .header {
@@ -180,12 +181,19 @@ const Wrapper = styled.section`
     color: var(--clr-white);
   }
 
+  .colspace {
+    padding: 2rem 0rem;
+  }
+
   @media (min-width: 992px) {
     padding: 9rem 2rem;
     .ant-col {
       padding: 0 2rem;
     }
 
+    .colspace {
+      /* padding: 0rem; */
+    }
     .icon {
       width: 113px;
       height: 113px;

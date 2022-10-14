@@ -55,7 +55,7 @@ const HomeHero = ({ home }) => {
           </Col>
           <Col sm={24} md={24} lg={12} data-aos="zoom-in">
             <div className="onlydesktop">
-              {/* <div className="player-wrapper">
+              <div className="player-wrapper">
                 <ReactPlayer
                   url={
                     heroVideo.data.attributes.url
@@ -70,7 +70,7 @@ const HomeHero = ({ home }) => {
                   className="react-player"
                   // image="/images/herovideo.jpg"
                 />
-                </div>*/}
+              </div>
             </div>
           </Col>
         </Row>

@@ -25,39 +25,37 @@ const HomeSectionDD = ({ home }) => {
   <ReactMarkdown children={HomeSectionDheading} className="title1" />*/}
             <h1 className="title1">In the Press</h1>
           </Col>
-          <Row className="space" data-aos="fade-up">
+          <Row className="space1" data-aos="fade-up">
             <Col sm={24} md={12} xl={12}>
               {/*<p className="header">{HomeSectionDbulletA}</p>
 <p className="info">{HomeSectionDbulletAdesc}</p>*/}
               <p className="header">CONNECT</p>
-              <Image
-                alt="revovideo"
-                src="/images/Virtual_try_on.png"
-                width={400}
-                height={400}
-                objectFit="contain"
-                quality={100}
-              />
 
               <p className="info">
-                Connect to your store effortlessly with easy no code
-                integrations.
+                <a
+                  href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Revo Video’s Mission to Make Every Video Shoppable With Just
+                  One Click
+                </a>
               </p>
             </Col>
             <Col sm={24} md={12} xl={12}>
               {/*    <p className="header">{HomeSectionDbulletB}</p>
 <p className="info">{HomeSectionDbulletBdesc}</p>*/}
               <p className="header">CREATE</p>
-              <Image
-                alt="revovideo"
-                src="/images/Virtual_try_on.png"
-                width={400}
-                height={400}
-                objectFit="contain"
-                quality={100}
-              />
+
               <p className="info">
-                Create a video show and add products and payment options.
+                <a
+                  href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Revo Video Launches Its New All-in-One Shopping Experience
+                  Platform on the ReachTV Network
+                </a>
               </p>
             </Col>
           </Row>
@@ -73,7 +71,7 @@ const Wrapper = styled.section`
 
   /* background-image: url("/images/circle.png"); */
   /* background-repeat: no-repeat; */
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   margin: 0 auto;
   text-align: center;
 
@@ -82,11 +80,11 @@ const Wrapper = styled.section`
   }
 
   .icon {
-    width: 64px;
+    /* width: 64px;
     height: 64px;
     margin: 0 auto;
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; */
   }
 
   .header {
@@ -97,7 +95,16 @@ const Wrapper = styled.section`
   }
 
   .info {
+    border: 1px solid var(--clr-black);
     font-size: 1.2rem;
+    padding: 2rem 0.75rem;
+
+    a {
+      color: var(--clr-black);
+      :hover {
+        color: var(--clr-primary-1);
+      }
+    }
   }
 
   .title1 h1,
@@ -108,7 +115,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding: 9rem 2rem;
+    padding: 6rem 2rem;
     .ant-col {
       padding: 0 2rem;
     }
@@ -124,7 +131,7 @@ const Wrapper = styled.section`
     }
 
     .title1 {
-      margin-bottom: 2rem;
+      /* margin-bottom: 2rem; */
     }
 
     h3 {
@@ -144,6 +151,7 @@ const Wrapper = styled.section`
 
     .info {
       font-size: 25px;
+      padding: 3rem;
     }
   }
 `;
