@@ -160,6 +160,7 @@ const Wrapper = styled.section`
     font-size: 1.75rem;
     font-family: "MontSemiBold", sans-serif;
     color: var(--clr-primary-1);
+    margin-bottom: 0.75rem;
   }
 
   .info {
