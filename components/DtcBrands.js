@@ -37,7 +37,7 @@ const DtcBrands = () => {
             alt="Revo Video"
             src="/images/dtcbrands.jpg"
             width={1000}
-            height={625}
+            height={492}
             objectFit="cover"
             // quality={100}
           />

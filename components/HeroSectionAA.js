@@ -163,14 +163,6 @@ const Wrapper = styled.section`
     padding-top: 0.75rem;
   }
 
-  .icon {
-    /* width: 64px;
-    height: 64px;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 2rem; */
-  }
-
   .header {
     font-size: 1.75rem;
     font-family: "MontSemiBold", sans-serif;
@@ -238,6 +230,26 @@ const Wrapper = styled.section`
       letter-spacing: normal;
       line-height: 1.1;
     }
+    .header {
+      font-size: 2rem;
+    }
+
+    .info {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 1439px) and (min-width: 1367px) {
+    .header {
+      font-size: 2rem;
+    }
+
+    .info {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
     .header {
       font-size: 2rem;
     }
