@@ -35,7 +35,7 @@ const DtcBrands = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
-            src="/images/easytouse.jpg"
+            src="/images/dtcbrands.jpg"
             width={1000}
             height={625}
             objectFit="cover"

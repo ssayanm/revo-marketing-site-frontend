@@ -4,6 +4,7 @@ import { Row, Col } from "antd";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
+import ReactPlayer from "react-player";
 
 const HomeSectionBB = ({ home }) => {
   const {
@@ -33,14 +34,18 @@ const HomeSectionBB = ({ home }) => {
               {/*<p className="header">{HomeSectionDbulletA}</p>
 <p className="info">{HomeSectionDbulletAdesc}</p>*/}
               <p className="header">CONNECT</p>
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/400"
-                width={400}
-                height={400}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/connect.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
 
               <p className="info">
                 Connect to your store effortlessly with easy no code
@@ -51,14 +56,18 @@ const HomeSectionBB = ({ home }) => {
               {/*    <p className="header">{HomeSectionDbulletB}</p>
 <p className="info">{HomeSectionDbulletBdesc}</p>*/}
               <p className="header">CREATE</p>
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/400"
-                width={400}
-                height={400}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/create.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
               <p className="info">
                 Create a video show and add products and payment options.
               </p>
@@ -67,14 +76,18 @@ const HomeSectionBB = ({ home }) => {
               {/* <p className="header">{HomeSectionDbulletC}</p>
 <p className="info">{HomeSectionDbulletCdesc}</p>*/}
               <p className="header">PUBLISH</p>
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/400"
-                width={400}
-                height={400}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/publish.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
               <p className="info">
                 Publish the video and reach your audience wherever they are
               </p>

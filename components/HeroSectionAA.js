@@ -4,6 +4,7 @@ import { Row, Col } from "antd";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 const HomeSectionAA = ({ home }) => {
   const {
@@ -35,14 +36,18 @@ const HomeSectionAA = ({ home }) => {
                 Leverage existing content to create shoppable videos
               </p>
 
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/500"
-                width={600}
-                height={559}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/createplaylist.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
 
               <div className="btn-section">
                 <Link href="/get-started">
@@ -56,14 +61,18 @@ const HomeSectionAA = ({ home }) => {
               <p className="info">
                 Use an engaging creator to promote shopping during a live event
               </p>
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/500"
-                width={600}
-                height={559}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/Liveshow.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
 
               <div className="btn-section">
                 <Link href="/get-started">
