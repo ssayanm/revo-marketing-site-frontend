@@ -51,8 +51,9 @@ const MediaOutlets = () => {
         */}
           <h1 className="title">For Media Outlets</h1>
           <p>
-            Sell like you already do on IG, FB and TikTok, everywhere with zero
-            ad cost, higher conversion rates and infinite reach.
+            Develop a slate of programming tied to Shoppable Videos and create
+            Live shopping events that drive consumers back to your properties
+            and enhance engagement and activation.
           </p>
           <div className="onlydesktop">
             <Link href="/get-started">

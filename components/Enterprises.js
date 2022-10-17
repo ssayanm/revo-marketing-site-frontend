@@ -51,8 +51,10 @@ const Enterprises = () => {
         */}
           <h1 className="title">For Enterprises</h1>
           <p>
-            Sell like you already do on IG, FB and TikTok, everywhere with zero
-            ad cost, higher conversion rates and infinite reach.
+            Transform content consumption and create new opportunities to
+            monetize your library. Create fully branded shows, sell
+            sponsorships, insert pre-roll and drive product or merch sales via
+            our one-click checkout.
           </p>
           <div className="onlydesktop">
             <Link href="/get-started">
