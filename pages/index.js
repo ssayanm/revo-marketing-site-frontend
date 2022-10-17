@@ -37,7 +37,7 @@ const Home = ({ home }) => {
       <HomeHeaderBanner home={home} />
       <HomeHero home={home} />
       <HomeSectionAA home={home} />
-      <HomeSectionBB home={home} />
+      {<HomeSectionBB home={home} />}
       <HomeCategories />
 
       <HomeSectionDD home={home} />

@@ -5,8 +5,10 @@ import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import Image from "next/image";
 import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
 
 const HomeSectionAA = ({ home }) => {
+  const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
   const {
     HomeSectionDheading,
     HomeSectionDbulletA,
@@ -88,14 +90,18 @@ const HomeSectionAA = ({ home }) => {
               <p className="info">
                 Personalized shopping experience between brand and consumer
               </p>
-              <Image
-                alt="revovideo"
-                src="https://via.placeholder.com/500"
-                width={600}
-                height={559}
-                objectFit="contain"
-                quality={100}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="/videos/VideoShopping.m4v"
+                  playing={true}
+                  muted={true}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                  className="react-player"
+                  image="https://via.placeholder.com/400"
+                />
+              </div>
 
               <div className="btn-section">
                 <Link href="/get-started">

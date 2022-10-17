@@ -5,8 +5,10 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
 import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
 
 const HomeSectionBB = ({ home }) => {
+  const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
   const {
     HomeSectionDheading,
     HomeSectionDbulletA,
