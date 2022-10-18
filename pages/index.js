@@ -17,36 +17,36 @@ import HomeCategories from "../components/HomeCategories";
 export const getStaticProps = async () => {
   try {
     const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
-    const response = await axios.get(
-      `${process.env.url}/api/home-v1/?populate=*`
-    );
+    // const response = await axios.get(
+    //   `${process.env.url}/api/home-v1/?populate=*`
+    // );
 
     const home = res.data;
-    const homev1 = response.data;
+    // const homev1 = response.data;
 
-    if (!home || !homev1)
+    if (!home)
       return (
         <div>
           <Loading />
         </div>
       );
-    return { props: { home, homev1 } };
+    return { props: { home } };
   } catch (error) {
     return { error };
   }
 };
 
-const Home = ({ home, homev1 }) => {
+const Home = ({ home }) => {
   return (
     <>
       <Meta title="Home" />
-      <HomeHeaderBanner homev1={homev1} />
-      <HomeHero home={home} homev1={homev1} />
-      <HomeSectionAA home={home} homev1={homev1} />
-      <HomeSectionBB home={home} homev1={homev1} />
-      <HomeCategories homev1={homev1} />
+      <HomeHeaderBanner home={home} />
+      <HomeHero home={home} />
+      <HomeSectionAA home={home} />
+      <HomeSectionBB home={home} />
+      <HomeCategories />
 
-      <HomeSectionDD home={home} homev1={homev1} />
+      <HomeSectionDD home={home} />
       {/* <HomeSectionB home={home} />*/}
       {/*<HomeSectionD home={home} />
       <HomeSectionC home={home} />*/}
