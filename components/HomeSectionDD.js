@@ -5,31 +5,34 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
 
-const HomeSectionDD = ({ home }) => {
+const HomeSectionDD = ({ home, homev1 }) => {
   const {
     HomeSectionDheading,
-    HomeSectionDbulletA,
-    HomeSectionDbulletAdesc,
-    HomeSectionDbulletB,
-    HomeSectionDbulletBdesc,
-    HomeSectionDbulletC,
-    HomeSectionDbulletCdesc,
-  } = home.data.attributes;
+    HomeSectionDboxA,
+    HomeSectionDboxALink,
+    HomeSectionDboxB,
+    HomeSectionDboxBLink,
+  } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
           <Col data-aos="fade-up">
-            {/*<BsPlayCircle className="icon" />
-
-  <ReactMarkdown children={HomeSectionDheading} className="title1" />*/}
+            {/*<h1 className="title1">{HomeSectionDheading}</h1>*/}
             <h1 className="title1">In the Press</h1>
           </Col>
-          <Row className="space1" data-aos="fade-up">
+          <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={12}>
-              {/*<p className="header">{HomeSectionDbulletA}</p>
-<p className="info">{HomeSectionDbulletAdesc}</p>*/}
-              <p className="header">CONNECT</p>
+              {/* <p className="info">
+                <a
+                  href={HomeSectionDboxALink}
+                  // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {HomeSectionDboxA}
+                </a>
+  </p>*/}
 
               <p className="info">
                 <a
@@ -43,9 +46,16 @@ const HomeSectionDD = ({ home }) => {
               </p>
             </Col>
             <Col sm={24} md={12} xl={12}>
-              {/*    <p className="header">{HomeSectionDbulletB}</p>
-<p className="info">{HomeSectionDbulletBdesc}</p>*/}
-              <p className="header">CREATE</p>
+              {/* <p className="info">
+                <a
+                  href={HomeSectionDboxBLink}
+                  // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {HomeSectionDboxB}
+                </a>
+</p>*/}
 
               <p className="info">
                 <a
@@ -71,20 +81,12 @@ const Wrapper = styled.section`
 
   /* background-image: url("/images/circle.png"); */
   /* background-repeat: no-repeat; */
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 2rem;
   margin: 0 auto;
   text-align: center;
 
   p {
     font-size: 1.75rem;
-  }
-
-  .icon {
-    /* width: 64px;
-    height: 64px;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 2rem; */
   }
 
   .header {

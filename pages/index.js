@@ -17,34 +17,40 @@ import HomeCategories from "../components/HomeCategories";
 export const getStaticProps = async () => {
   try {
     const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
+    const response = await axios.get(
+      `${process.env.url}/api/home-v1/?populate=*`
+    );
+
     const home = res.data;
-    if (!home)
+    const homev1 = response.data;
+
+    if (!home || !homev1)
       return (
         <div>
           <Loading />
         </div>
       );
-    return { props: { home } };
+    return { props: { home, homev1 } };
   } catch (error) {
     return { error };
   }
 };
 
-const Home = ({ home }) => {
+const Home = ({ home, homev1 }) => {
   return (
     <>
       <Meta title="Home" />
-      <HomeHeaderBanner home={home} />
-      <HomeHero home={home} />
-      <HomeSectionAA home={home} />
-      {<HomeSectionBB home={home} />}
-      <HomeCategories />
+      <HomeHeaderBanner homev1={homev1} />
+      <HomeHero home={home} homev1={homev1} />
+      <HomeSectionAA home={home} homev1={homev1} />
+      <HomeSectionBB home={home} homev1={homev1} />
+      <HomeCategories homev1={homev1} />
 
-      <HomeSectionDD home={home} />
+      <HomeSectionDD home={home} homev1={homev1} />
       {/* <HomeSectionB home={home} />*/}
       {/*<HomeSectionD home={home} />
       <HomeSectionC home={home} />*/}
-      <HomeSectionE home={home} />
+      <HomeSectionE home={home} homev1={homev1} />
     </>
   );
 };

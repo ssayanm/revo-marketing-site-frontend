@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { homeCategories } from "../utils/constants";
 import Select from "react-select";
 import { Tabs } from "antd";
+import DtcBrands from "../components/DtcBrands";
 
 const { Items } = Tabs;
 
@@ -23,10 +24,11 @@ const customStyles = {
   }),
 };
 
-const HomeCategories = () => {
+const HomeCategories = ({ homev1 }) => {
   // const [value, setValue] = useState(0);
 
-  // const { heading, subHeading } = howItWorks.data.attributes;
+  const { HomeSectionCheading, HomeSectionCBoxAheading } =
+    homev1.data.attributes;
 
   // console.log(heading);
 
@@ -34,6 +36,7 @@ const HomeCategories = () => {
 
   return (
     <NavContainer>
+      {/*<h1 className="title text-center">{HomeSectionCheading}</h1>*/}
       <h1 className="title text-center">The perfect video solution</h1>
 
       <Tabs
@@ -51,6 +54,28 @@ const HomeCategories = () => {
           );
         })}
       </Tabs>
+      {/*  <Tabs
+        defaultActiveKey="1"
+        onChange={callback}
+        centered="true"
+        items={[
+          {
+            label: `Tab 1`,
+            key: "1",
+            children: <DtcBrands />,
+          },
+          {
+            label: `Tab 2`,
+            key: "2",
+            children: `Content of Tab Pane 2`,
+          },
+          {
+            label: `Tab 3`,
+            key: "3",
+            children: `Content of Tab Pane 3`,
+          },
+        ]}
+      />*/}
 
       <div className="onlymobile navmob">
         <Select

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const HomeHeaderBanner = ({ home }) => {
-  const { headerBanner, headerBannerText } = home.data.attributes;
+const HomeHeaderBanner = ({ homev1 }) => {
+  const { headerBanner, headerBannerText } = homev1.data.attributes;
 
   return (
     <Wrapper>

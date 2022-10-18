@@ -1,22 +1,22 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { Row, Col } from "antd";
+import ReactMarkdown from "react-markdown";
 
-const HomeSectionE = ({ home }) => {
+const HomeSectionE = ({ homev1 }) => {
   const {
     HomeSectionEheading,
     HomeSectionEsubheading,
 
     HomeSectionEbutton,
     HomeSectionEbuttonLink,
-  } = home.data.attributes;
+  } = homev1.data.attributes;
 
   return (
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col data-aos="fade-up">
-          {/* <h3 className="title">{HomeSectionEheading}</h3>
-  <p>{HomeSectionEsubheading}</p>*/}
+          {/* <ReactMarkdown children={HomeSectionEheading} className="title" />*/}
           <h3 className="title">
             Unleash the power of social selling <br></br>anywhere and everywhere
           </h3>
@@ -42,9 +42,12 @@ const Wrapper = styled.section`
   margin: 0 auto;
   padding: 6rem 2rem;
 
-  .title {
-    text-align: center;
+  .title p {
+    margin-bottom: 0rem;
+    font-family: "MontBold", sans-serif;
+    font-size: 2.2rem;
   }
+
   p {
     text-align: center;
     font-family: "MontSemiBold", sans-serif;
@@ -53,6 +56,14 @@ const Wrapper = styled.section`
 
   @media (min-width: 992px) {
     padding: 9rem 2rem;
+    .title p {
+      font-size: 3.5rem;
+    }
+
+    .title {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
     p {
       font-size: 2.3rem;
     }

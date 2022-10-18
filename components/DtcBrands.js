@@ -12,7 +12,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const DtcBrands = () => {
   const { data, error } = useSWR(
-    `${process.env.url}/api/how-it-works?populate=*`,
+    `${process.env.url}/api/home-v1?populate=*`,
     fetcher
   );
 
@@ -43,12 +43,6 @@ const DtcBrands = () => {
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
-          {/*  <div className="iconbar">
-            <BsPlayFill className="icon" />
-          <h1 className="title">{data.data[6].attributes.heading}</h1>
-          </div>
-              <ReactMarkdown children={data.data[6].attributes.subHeading} />
-        */}
           <h1 className="title">For DTC Brands</h1>
           <p>
             Sell like you already do on IG, FB and TikTok, everywhere with zero

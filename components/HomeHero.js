@@ -7,9 +7,9 @@ import dynamic from "next/dynamic";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-const HomeHero = ({ home }) => {
+const HomeHero = ({ home, homev1 }) => {
   const { heading, subHeading, heroVideo, heroPara, buttonText, buttonLink } =
-    home.data.attributes;
+    homev1.data.attributes;
 
   return (
     <Wrapper>
