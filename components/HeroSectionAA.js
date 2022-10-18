@@ -7,31 +7,31 @@ import Image from "next/image";
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
-const HomeSectionAA = ({ home, homev1 }) => {
+const HomeSectionAA = ({ home }) => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-  const {
-    HomeSectionAheading,
-    HomeSectionABoxAicon,
-    HomeSectionABoxAimage,
-    HomeSectionABoxAheading,
-    HomeSectionABoxAsubHeading,
-    HomeSectionABoxAbutton,
-    HomeSectionABoxAbuttonLink,
+  // const {
+  //   HomeSectionAheading,
+  //   HomeSectionABoxAicon,
+  //   HomeSectionABoxAimage,
+  //   HomeSectionABoxAheading,
+  //   HomeSectionABoxAsubHeading,
+  //   HomeSectionABoxAbutton,
+  //   HomeSectionABoxAbuttonLink,
 
-    HomeSectionABoxBicon,
-    HomeSectionABoxBimage,
-    HomeSectionABoxBheading,
-    HomeSectionABoxBsubHeading,
-    HomeSectionABoxBbutton,
-    HomeSectionABoxBbuttonLink,
+  //   HomeSectionABoxBicon,
+  //   HomeSectionABoxBimage,
+  //   HomeSectionABoxBheading,
+  //   HomeSectionABoxBsubHeading,
+  //   HomeSectionABoxBbutton,
+  //   HomeSectionABoxBbuttonLink,
 
-    HomeSectionABoxCicon,
-    HomeSectionABoxCimage,
-    HomeSectionABoxCheading,
-    HomeSectionABoxCsubHeading,
-    HomeSectionABoxCbutton,
-    HomeSectionABoxCbuttonLink,
-  } = homev1.data.attributes;
+  //   HomeSectionABoxCicon,
+  //   HomeSectionABoxCimage,
+  //   HomeSectionABoxCheading,
+  //   HomeSectionABoxCsubHeading,
+  //   HomeSectionABoxCbutton,
+  //   HomeSectionABoxCbuttonLink,
+  // } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">

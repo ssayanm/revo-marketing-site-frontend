@@ -24,11 +24,11 @@ const customStyles = {
   }),
 };
 
-const HomeCategories = ({ homev1 }) => {
+const HomeCategories = () => {
   // const [value, setValue] = useState(0);
 
-  const { HomeSectionCheading, HomeSectionCBoxAheading } =
-    homev1.data.attributes;
+  // const { HomeSectionCheading, HomeSectionCBoxAheading } =
+  //   homev1.data.attributes;
 
   // console.log(heading);
 

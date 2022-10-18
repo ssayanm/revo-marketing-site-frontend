@@ -7,25 +7,25 @@ import Link from "next/link";
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
-const HomeSectionBB = ({ home, homev1 }) => {
+const HomeSectionBB = ({ home }) => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-  const {
-    HomeSectionBheading,
-    HomeSectionBBoxAheading,
-    HomeSectionBBoxAsubHeading,
-    HomeSectionBBoxAimage,
+  // const {
+  //   HomeSectionBheading,
+  //   HomeSectionBBoxAheading,
+  //   HomeSectionBBoxAsubHeading,
+  //   HomeSectionBBoxAimage,
 
-    HomeSectionBBoxBheading,
-    HomeSectionBBoxBsubHeading,
-    HomeSectionBBoxBimage,
+  //   HomeSectionBBoxBheading,
+  //   HomeSectionBBoxBsubHeading,
+  //   HomeSectionBBoxBimage,
 
-    HomeSectionBBoxCheading,
-    HomeSectionBBoxCsubHeading,
-    HomeSectionBBoxCimage,
+  //   HomeSectionBBoxCheading,
+  //   HomeSectionBBoxCsubHeading,
+  //   HomeSectionBBoxCimage,
 
-    HomeSectionBbutton,
-    HomeSectionBbuttonLink,
-  } = homev1.data.attributes;
+  //   HomeSectionBbutton,
+  //   HomeSectionBbuttonLink,
+  // } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">

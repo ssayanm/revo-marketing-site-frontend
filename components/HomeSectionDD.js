@@ -5,14 +5,14 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
 
-const HomeSectionDD = ({ home, homev1 }) => {
-  const {
-    HomeSectionDheading,
-    HomeSectionDboxA,
-    HomeSectionDboxALink,
-    HomeSectionDboxB,
-    HomeSectionDboxBLink,
-  } = homev1.data.attributes;
+const HomeSectionDD = ({ home }) => {
+  // const {
+  //   HomeSectionDheading,
+  //   HomeSectionDboxA,
+  //   HomeSectionDboxALink,
+  //   HomeSectionDboxB,
+  //   HomeSectionDboxBLink,
+  // } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
