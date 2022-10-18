@@ -41,6 +41,9 @@ const Wrapper = styled.section`
   background-position: center center; */
   margin: 0 auto;
   padding: 6rem 2rem;
+  .title {
+    text-align: center;
+  }
 
   .title p {
     margin-bottom: 0rem;
