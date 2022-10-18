@@ -17,12 +17,12 @@ import HomeCategories from "../components/HomeCategories";
 export const getStaticProps = async () => {
   try {
     const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
-    // const response = await axios.get(
-    //   `${process.env.url}/api/home-v1/?populate=*`
-    // );
+    const response = await axios.get(
+      `${process.env.url}/api/home-v1/?populate=*`
+    );
 
     const home = res.data;
-    // const homev1 = response.data;
+    const homev1 = response.data;
 
     if (!home)
       return (
@@ -30,18 +30,18 @@ export const getStaticProps = async () => {
           <Loading />
         </div>
       );
-    return { props: { home } };
+    return { props: { home, homev1 } };
   } catch (error) {
     return { error };
   }
 };
 
-const Home = ({ home }) => {
+const Home = ({ home, homev1 }) => {
   return (
     <>
       <Meta title="Home" />
-      <HomeHeaderBanner home={home} />
-      <HomeHero home={home} />
+      <HomeHeaderBanner homev1={homev1} />
+      <HomeHero home={home} homev1={homev1} />
       <HomeSectionAA home={home} />
       <HomeSectionBB home={home} />
       <HomeCategories />
