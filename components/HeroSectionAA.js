@@ -235,11 +235,11 @@ const Wrapper = styled.section`
     }
 
     .info {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 
-  @media (max-width: 1439px) and (min-width: 1367px) {
+  @media (max-width: 1439px) and (min-width: 1366px) {
     .header {
       font-size: 2rem;
     }
@@ -256,6 +256,16 @@ const Wrapper = styled.section`
 
     .info {
       font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 2011px) {
+    .header {
+      font-size: 2rem;
+    }
+
+    .info {
+      font-size: 1.5rem;
     }
   }
 `;
