@@ -11,8 +11,9 @@ import Link from "next/link";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const DtcBrands = () => {
+  // const { HomeSectionCBoxAheading } = homev1.data.attributes;
   const { data, error } = useSWR(
-    `${process.env.url}/api/home-v1?populate=*`,
+    `${process.env.url}/api/home-v1/?populate=*`,
     fetcher
   );
 
@@ -23,6 +24,8 @@ const DtcBrands = () => {
         <Loading />
       </div>
     );
+
+  console.log(data.data.attributes.HomeSectionCBoxAimage.data.attributes.url);
 
   return (
     <Wrapper>
@@ -35,6 +38,7 @@ const DtcBrands = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
+            // src={HomeSectionCBoxAimage}
             src="/images/dtcbrands.jpg"
             width={1000}
             height={492}
@@ -58,6 +62,19 @@ const DtcBrands = () => {
               <a className="btn btn-start"> Try it Free</a>
             </Link>
           </center>
+
+          {/* <h1 className="title">{HomeSectionCBoxAheading}</h1>
+          <p>{HomeSectionCBoxAsubHeading}</p>
+          <div className="onlydesktop">
+            <Link href={`/${HomeSectionCBoxAbuttonLink}`}>
+              <a className="btn btn-start"> {HomeSectionCBoxAbutton}</a>
+            </Link>
+          </div>
+          <center className="onlymobile">
+            <Link href={`/${HomeSectionCBoxAbuttonLink}`}>
+              <a className="btn btn-start"> {HomeSectionCBoxAbutton}</a>
+            </Link>
+  </center>*/}
         </Col>
       </Row>
     </Wrapper>

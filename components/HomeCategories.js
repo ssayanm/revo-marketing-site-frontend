@@ -24,22 +24,21 @@ const customStyles = {
   }),
 };
 
-const HomeCategories = () => {
+const HomeCategories = ({ homev1 }) => {
   // const [value, setValue] = useState(0);
 
-  // const { HomeSectionCheading, HomeSectionCBoxAheading } =
-  //   homev1.data.attributes;
-
-  // console.log(heading);
+  const { HomeSectionCheading, HomeSectionCBoxA, HomeSectionCBoxAimage } =
+    homev1.data.attributes;
 
   const [selectedOption, setSelectedOption] = useState(homeCategories[0]);
 
   return (
     <NavContainer>
-      {/*<h1 className="title text-center">{HomeSectionCheading}</h1>*/}
+      {/* <h1 className="title text-center">{HomeSectionCheading}</h1>*/}
+
       <h1 className="title text-center">The perfect video solution</h1>
 
-      <Tabs
+      {/*  <Tabs
         defaultActiveKey="1"
         onChange={callback}
         centered="true"
@@ -53,29 +52,24 @@ const HomeCategories = () => {
             </Items>
           );
         })}
-      </Tabs>
-      {/*  <Tabs
+      </Tabs>*/}
+
+      <Tabs
+        className="onlydesktop"
         defaultActiveKey="1"
-        onChange={callback}
-        centered="true"
-        items={[
-          {
-            label: `Tab 1`,
-            key: "1",
-            children: <DtcBrands />,
-          },
-          {
-            label: `Tab 2`,
-            key: "2",
-            children: `Content of Tab Pane 2`,
-          },
-          {
-            label: `Tab 3`,
-            key: "3",
-            children: `Content of Tab Pane 3`,
-          },
-        ]}
-      />*/}
+        centered
+        items={homeCategories.map((link, index) => {
+          // const id = String(i + 1);
+          const { id, text, components } = link;
+
+          return {
+            label: `${text}`,
+            key: `${id}`,
+            // children: <DtcBrands />,
+            children: components,
+          };
+        })}
+      />
 
       <div className="onlymobile navmob">
         <Select

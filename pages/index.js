@@ -44,7 +44,7 @@ const Home = ({ home, homev1 }) => {
       <HomeHero home={home} homev1={homev1} />
       <HomeSectionAA home={home} />
       <HomeSectionBB home={home} />
-      <HomeCategories />
+      <HomeCategories homev1={homev1} />
 
       <HomeSectionDD home={home} />
       {/* <HomeSectionB home={home} />*/}
