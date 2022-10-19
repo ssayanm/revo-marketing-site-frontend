@@ -2,16 +2,13 @@ import styled from "styled-components";
 import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
-import ReactPlayer from "react-player/lazy";
 import useSWR from "swr";
 import Loading from "./Loading";
-import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const DtcBrands = () => {
-  // const { HomeSectionCBoxAheading } = homev1.data.attributes;
   const { data, error } = useSWR(
     `${process.env.url}/api/home-v1/?populate=*`,
     fetcher
@@ -25,8 +22,6 @@ const DtcBrands = () => {
       </div>
     );
 
-  console.log(data.data.attributes.HomeSectionCBoxAimage.data.attributes.url);
-
   return (
     <Wrapper>
       <Row
@@ -38,8 +33,12 @@ const DtcBrands = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
-            // src={HomeSectionCBoxAimage}
-            src="/images/dtcbrands.jpg"
+            src={
+              data.data.attributes.HomeSectionCBoxAimage.data.attributes.url
+                ? data.data.attributes.HomeSectionCBoxAimage.data.attributes.url
+                : "/images/dtcbrands.jpg"
+            }
+            // src="/images/dtcbrands.jpg"
             width={1000}
             height={492}
             objectFit="cover"
@@ -47,34 +46,26 @@ const DtcBrands = () => {
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
-          <h1 className="title">For DTC Brands</h1>
-          <p>
-            Sell like you already do on IG, FB and TikTok, everywhere with zero
-            ad cost, higher conversion rates and infinite reach.
-          </p>
+          <h1 className="title">
+            {data.data.attributes.HomeSectionCBoxAheading}
+          </h1>
+          <p>{data.data.attributes.HomeSectionCBoxAsubHeading}</p>
           <div className="onlydesktop">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxAbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxAbutton}
+              </a>
             </Link>
           </div>
           <center className="onlymobile">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxAbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxAbutton}
+              </a>
             </Link>
           </center>
-
-          {/* <h1 className="title">{HomeSectionCBoxAheading}</h1>
-          <p>{HomeSectionCBoxAsubHeading}</p>
-          <div className="onlydesktop">
-            <Link href={`/${HomeSectionCBoxAbuttonLink}`}>
-              <a className="btn btn-start"> {HomeSectionCBoxAbutton}</a>
-            </Link>
-          </div>
-          <center className="onlymobile">
-            <Link href={`/${HomeSectionCBoxAbuttonLink}`}>
-              <a className="btn btn-start"> {HomeSectionCBoxAbutton}</a>
-            </Link>
-  </center>*/}
         </Col>
       </Row>
     </Wrapper>

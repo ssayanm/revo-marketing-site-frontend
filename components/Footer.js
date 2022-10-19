@@ -64,43 +64,45 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-          <ul className="social-icons onlymobile">
-            <li>
-              <Link href={data.data[4].attributes.url}>
-                <a target="_blank">
-                  <FaLinkedin className="social-icon "></FaLinkedin>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.facebook.com/revovideo">
-                <a target="_blank">
-                  <FaFacebookSquare className="social-icon "></FaFacebookSquare>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.instagram.com/revovideo/">
-                <a target="_blank">
-                  <FaInstagramSquare className="social-icon "></FaInstagramSquare>
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="onlymobile">
-          <ul className="nav-links">
-            <li>
-              <Link href={data.data[2].attributes.url}>
-                <a>{data.data[2].attributes.text}</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={data.data[3].attributes.url}>
-                <a>{data.data[3].attributes.text}</a>
-              </Link>
-            </li>
-          </ul>
+          <div className="onlymobile">
+            <ul className="nav-links">
+              <li>
+                <Link href={data.data[2].attributes.url}>
+                  <a>{data.data[2].attributes.text}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={data.data[3].attributes.url}>
+                  <a>{data.data[3].attributes.text}</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="onlymobile">
+            <ul className="social-icons">
+              <li>
+                <Link href={data.data[4].attributes.url}>
+                  <a target="_blank">
+                    <FaLinkedin className="social-icon "></FaLinkedin>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.facebook.com/revovideo">
+                  <a target="_blank">
+                    <FaFacebookSquare className="social-icon "></FaFacebookSquare>
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.instagram.com/revovideo/">
+                  <a target="_blank">
+                    <FaInstagramSquare className="social-icon "></FaInstagramSquare>
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="onlydesktop">
@@ -203,6 +205,11 @@ const Wrapper = styled.footer`
       }
     }
   }
+
+  .social-icons li {
+    margin: 0.5rem 0.5rem;
+  }
+
   @media (min-width: 992px) {
     .foot {
       padding: 4rem;

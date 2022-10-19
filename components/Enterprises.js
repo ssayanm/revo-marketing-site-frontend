@@ -1,18 +1,15 @@
 import styled from "styled-components";
-import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
-import ReactPlayer from "react-player/lazy";
 import useSWR from "swr";
 import Loading from "./Loading";
-import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Enterprises = () => {
   const { data, error } = useSWR(
-    `${process.env.url}/api/how-it-works?populate=*`,
+    `${process.env.url}/api/home-v1/?populate=*`,
     fetcher
   );
 
@@ -35,7 +32,12 @@ const Enterprises = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
-            src="/images/easytouse.jpg"
+            src={
+              data.data.attributes.HomeSectionCBoxDimage.data.attributes.url
+                ? data.data.attributes.HomeSectionCBoxDimage.data.attributes.url
+                : "/images/easytouse.jpg"
+            }
+            // src="/images/easytouse.jpg"
             width={1000}
             height={625}
             objectFit="cover"
@@ -43,27 +45,25 @@ const Enterprises = () => {
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
-          {/*  <div className="iconbar">
-            <BsPlayFill className="icon" />
-          <h1 className="title">{data.data[6].attributes.heading}</h1>
-          </div>
-              <ReactMarkdown children={data.data[6].attributes.subHeading} />
-        */}
-          <h1 className="title">For Enterprises</h1>
-          <p>
-            Transform content consumption and create new opportunities to
-            monetize your library. Create fully branded shows, sell
-            sponsorships, insert pre-roll and drive product or merch sales via
-            our one-click checkout.
-          </p>
+          <h1 className="title">
+            {data.data.attributes.HomeSectionCBoxDheading}
+          </h1>
+
+          <p>{data.data.attributes.HomeSectionCBoxDsubHeading}</p>
           <div className="onlydesktop">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxDbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxDbutton}
+              </a>
             </Link>
           </div>
           <center className="onlymobile">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxDbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxDbutton}
+              </a>
             </Link>
           </center>
         </Col>
