@@ -7,31 +7,31 @@ import Image from "next/image";
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
-const HomeSectionAA = ({ home }) => {
+const HomeSectionAA = ({ homev1 }) => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-  // const {
-  //   HomeSectionAheading,
-  //   HomeSectionABoxAicon,
-  //   HomeSectionABoxAimage,
-  //   HomeSectionABoxAheading,
-  //   HomeSectionABoxAsubHeading,
-  //   HomeSectionABoxAbutton,
-  //   HomeSectionABoxAbuttonLink,
+  const {
+    HomeSectionAheading,
+    HomeSectionABoxAicon,
+    HomeSectionABoxAimage,
+    HomeSectionABoxAheading,
+    HomeSectionABoxAsubHeading,
+    HomeSectionABoxAbutton,
+    HomeSectionABoxAbuttonLink,
 
-  //   HomeSectionABoxBicon,
-  //   HomeSectionABoxBimage,
-  //   HomeSectionABoxBheading,
-  //   HomeSectionABoxBsubHeading,
-  //   HomeSectionABoxBbutton,
-  //   HomeSectionABoxBbuttonLink,
+    HomeSectionABoxBicon,
+    HomeSectionABoxBimage,
+    HomeSectionABoxBheading,
+    HomeSectionABoxBsubHeading,
+    HomeSectionABoxBbutton,
+    HomeSectionABoxBbuttonLink,
 
-  //   HomeSectionABoxCicon,
-  //   HomeSectionABoxCimage,
-  //   HomeSectionABoxCheading,
-  //   HomeSectionABoxCsubHeading,
-  //   HomeSectionABoxCbutton,
-  //   HomeSectionABoxCbuttonLink,
-  // } = homev1.data.attributes;
+    HomeSectionABoxCicon,
+    HomeSectionABoxCimage,
+    HomeSectionABoxCheading,
+    HomeSectionABoxCsubHeading,
+    HomeSectionABoxCbutton,
+    HomeSectionABoxCbuttonLink,
+  } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
@@ -42,7 +42,6 @@ const HomeSectionAA = ({ home }) => {
           </Col>
           <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={8}>
-              {/*
               <p className="circle">{HomeSectionABoxAicon}</p>
               <p className="header">{HomeSectionABoxAheading}</p>
               <p className="info">{HomeSectionABoxAsubHeading}</p>
@@ -69,9 +68,7 @@ const HomeSectionAA = ({ home }) => {
                 </Link>
               </div>
 
-
-              */}
-              <p className="circle">1</p>
+              {/*  <p className="circle">1</p>
               <p className="header">Short From Video</p>
               <p className="info">
                 Leverage existing content to create shoppable videos
@@ -89,7 +86,7 @@ const HomeSectionAA = ({ home }) => {
                     image="https://via.placeholder.com/400"
                   />
                 </div>
-              </div>
+                </div>
 
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
@@ -111,9 +108,9 @@ const HomeSectionAA = ({ home }) => {
                   <a className="btn1 btn-start"> Learn More</a>
                 </Link>
               </div>
+              */}
             </Col>
             <Col sm={24} md={12} xl={8} className="colspace">
-              {/*
               <p className="circle">{HomeSectionABoxBicon}</p>
               <p className="header">{HomeSectionABoxBheading}</p>
               <p className="info">{HomeSectionABoxBsubHeading}</p>
@@ -133,16 +130,14 @@ const HomeSectionAA = ({ home }) => {
                   className="react-player"
                   image="https://via.placeholder.com/400"
                 />
-                
               </div>
               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxBbuttonLink}`}>
-                  <a className="btn1 btn-start">{HomeSectionABoxbbutton}</a>
+                  <a className="btn1 btn-start">{HomeSectionABoxBbutton}</a>
                 </Link>
               </div>
-              */}
 
-              <p className="circle">2</p>
+              {/*<p className="circle">2</p>
               <p className="header">Live Shopping</p>
               <p className="info">
                 Use an engaging creator to promote shopping during a live event
@@ -181,10 +176,9 @@ const HomeSectionAA = ({ home }) => {
                 <Link href="/get-started">
                   <a className="btn1 btn-start"> Learn More</a>
                 </Link>
-              </div>
+                </div>*/}
             </Col>
             <Col sm={24} md={12} xl={8} className="colspace">
-              {/*
               <p className="circle">{HomeSectionABoxCicon}</p>
               <p className="header">{HomeSectionABoxCheading}</p>
               <p className="info">{HomeSectionABoxCsubHeading}</p>
@@ -205,13 +199,13 @@ const HomeSectionAA = ({ home }) => {
                   image="https://via.placeholder.com/400"
                 />
               </div>
-               <div className="btn-section">
+              <div className="btn-section">
                 <Link href={`/${HomeSectionABoxCbuttonLink}`}>
                   <a className="btn1 btn-start">{HomeSectionABoxCbutton}</a>
                 </Link>
               </div>
-              */}
-              <p className="circle">3</p>
+
+              {/* <p className="circle">3</p>
               <p className="header">1:1 Video Shopping</p>
               <p className="info">
                 Personalized shopping experience between brand and consumer
@@ -249,7 +243,7 @@ const HomeSectionAA = ({ home }) => {
                 <Link href="/get-started">
                   <a className="btn1 btn-start"> Learn More</a>
                 </Link>
-              </div>
+                </div>*/}
             </Col>
           </Row>
         </Row>
@@ -259,12 +253,8 @@ const HomeSectionAA = ({ home }) => {
 };
 
 const Wrapper = styled.section`
-  /* min-height: 50vh; */
   padding: 6rem 2rem 4rem;
   background: var(--clr-black);
-  /* background-image: url("/images/circle.png"); */
-  /* background-repeat: no-repeat; */
-  /* padding: 6rem 2rem; */
   margin: 0 auto;
   text-align: center;
 
@@ -284,7 +274,6 @@ const Wrapper = styled.section`
   }
 
   .btn-start {
-    /* background: var(--clr-primary-1); */
     color: var(--clr-white);
     font-size: 1.3rem;
     border-bottom: 1px solid var(--clr-white);
@@ -294,7 +283,6 @@ const Wrapper = styled.section`
 
     &:hover {
       color: var(--clr-primary-1);
-      /* background: var(--clr-white); */
       border-bottom: 1px solid var(--clr-primary-1);
     }
   }
