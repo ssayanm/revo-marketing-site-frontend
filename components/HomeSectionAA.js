@@ -67,48 +67,6 @@ const HomeSectionAA = ({ homev1 }) => {
                   <a className="btn1 btn-start">{HomeSectionABoxAbutton}</a>
                 </Link>
               </div>
-
-              {/*  <p className="circle">1</p>
-              <p className="header">Short From Video</p>
-              <p className="info">
-                Leverage existing content to create shoppable videos
-              </p>
-              <div className="onlydesktop">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/createplaylist.m4v"
-                    playing={true}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-                </div>
-
-              <div className="onlymobile" data-aos="zoom-in">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/createplaylist.m4v"
-                    playing={false}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
-                </Link>
-              </div>
-              */}
             </Col>
             <Col sm={24} md={12} xl={8} className="colspace">
               <p className="circle">{HomeSectionABoxBicon}</p>
@@ -136,47 +94,6 @@ const HomeSectionAA = ({ homev1 }) => {
                   <a className="btn1 btn-start">{HomeSectionABoxBbutton}</a>
                 </Link>
               </div>
-
-              {/*<p className="circle">2</p>
-              <p className="header">Live Shopping</p>
-              <p className="info">
-                Use an engaging creator to promote shopping during a live event
-              </p>
-              <div className="onlydesktop">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/Liveshow.m4v"
-                    playing={true}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="onlymobile">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/Liveshow.m4v"
-                    playing={false}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
-                </Link>
-                </div>*/}
             </Col>
             <Col sm={24} md={12} xl={8} className="colspace">
               <p className="circle">{HomeSectionABoxCicon}</p>
@@ -204,46 +121,6 @@ const HomeSectionAA = ({ homev1 }) => {
                   <a className="btn1 btn-start">{HomeSectionABoxCbutton}</a>
                 </Link>
               </div>
-
-              {/* <p className="circle">3</p>
-              <p className="header">1:1 Video Shopping</p>
-              <p className="info">
-                Personalized shopping experience between brand and consumer
-              </p>
-              <div className="onlydesktop">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/VideoShopping.m4v"
-                    playing={true}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-              <div className="onlymobile">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/VideoShopping.m4v"
-                    playing={false}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
-                </Link>
-                </div>*/}
             </Col>
           </Row>
         </Row>

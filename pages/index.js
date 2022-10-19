@@ -40,16 +40,16 @@ const Home = ({ home, homev1 }) => {
     <>
       <Meta title="Home" />
       <HomeHeaderBanner homev1={homev1} />
-      <HomeHero homev1={homev1} />
-      <HomeSectionAA homev1={homev1} />
-      <HomeSectionBB home={home} />
+      {/*  <HomeHero homev1={homev1} />*/}
+      {/* <HomeSectionAA homev1={homev1} />*/}
+      <HomeSectionBB homev1={homev1} />
       <HomeCategories homev1={homev1} />
 
-      <HomeSectionDD home={home} />
+      <HomeSectionDD homev1={homev1} />
       {/* <HomeSectionB home={home} />*/}
       {/*<HomeSectionD home={home} />
       <HomeSectionC home={home} />*/}
-      <HomeSectionE home={home} homev1={homev1} />
+      <HomeSectionE homev1={homev1} />
     </>
   );
 };
