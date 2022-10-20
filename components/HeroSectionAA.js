@@ -72,7 +72,7 @@ const HomeSectionAA = ({ home }) => {
 
               */}
               <p className="circle">1</p>
-              <p className="header">Short From Video</p>
+              <p className="header">Short Form Video</p>
               <p className="info">
                 Leverage existing content to create shoppable videos
               </p>
