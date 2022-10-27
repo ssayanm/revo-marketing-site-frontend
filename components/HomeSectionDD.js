@@ -36,6 +36,29 @@ const HomeSectionDD = ({ home }) => {
 
               <p className="info">
                 <a
+                  href="https://www.retailbrew.com/stories/2022/10/18/it-s-not-too-late-to-test-a-live-shopping-strategy-for-the-holidays"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  It’s not too late to test a live-shopping strategy for the
+                  holidays
+                </a>
+              </p>
+            </Col>
+            <Col sm={24} md={12} xl={12}>
+              {/* <p className="info">
+                <a
+                  href={HomeSectionDboxALink}
+                  // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {HomeSectionDboxA}
+                </a>
+  </p>*/}
+
+              <p className="info">
+                <a
                   href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -45,7 +68,7 @@ const HomeSectionDD = ({ home }) => {
                 </a>
               </p>
             </Col>
-            <Col sm={24} md={12} xl={12}>
+            <Col sm={24} md={24} xl={24}>
               {/* <p className="info">
                 <a
                   href={HomeSectionDboxBLink}
