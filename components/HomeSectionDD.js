@@ -23,7 +23,7 @@ const HomeSectionDD = ({ homev1 }) => {
               <p className="info">
                 <a
                   href={HomeSectionDboxALink}
-                  // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
+                  // href="https://www.retailbrew.com/stories/2022/10/18/it-s-not-too-late-to-test-a-live-shopping-strategy-for-the-holidays"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -35,7 +35,7 @@ const HomeSectionDD = ({ homev1 }) => {
               <p className="info">
                 <a
                   href={HomeSectionDboxBLink}
-                  // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
+                  // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
