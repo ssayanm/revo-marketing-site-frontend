@@ -8,6 +8,8 @@ const HomeSectionDD = ({ homev1 }) => {
     HomeSectionDboxALink,
     HomeSectionDboxB,
     HomeSectionDboxBLink,
+    HomeSectionDboxC,
+    HomeSectionDboxCLink,
   } = homev1.data.attributes;
   return (
     <Wrapper>
@@ -38,6 +40,18 @@ const HomeSectionDD = ({ homev1 }) => {
                   rel="noopener noreferrer"
                 >
                   {HomeSectionDboxB}
+                </a>
+              </p>
+            </Col>
+            <Col sm={24} md={24} xl={24}>
+              <p className="info">
+                <a
+                  href={HomeSectionDboxCLink}
+                  // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {HomeSectionDboxC}
                 </a>
               </p>
             </Col>

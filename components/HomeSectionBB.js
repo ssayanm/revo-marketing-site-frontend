@@ -36,7 +36,7 @@ const HomeSectionBB = ({ homev1 }) => {
           <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={8}>
               <p className="header">{HomeSectionBBoxAheading}</p>
-              <div className="onlydesktop">
+              <div className="onlydesktop" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
@@ -54,7 +54,7 @@ const HomeSectionBB = ({ homev1 }) => {
                   />
                 </div>
               </div>
-              <div className="onlymobile">
+              <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
@@ -77,7 +77,7 @@ const HomeSectionBB = ({ homev1 }) => {
             </Col>
             <Col sm={24} md={12} xl={8}>
               <p className="header">{HomeSectionBBoxBheading}</p>
-              <div className="onlydesktop">
+              <div className="onlydesktop" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
@@ -95,7 +95,7 @@ const HomeSectionBB = ({ homev1 }) => {
                   />
                 </div>
               </div>
-              <div className="onlymobile">
+              <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
@@ -118,7 +118,7 @@ const HomeSectionBB = ({ homev1 }) => {
             </Col>
             <Col sm={24} md={12} xl={8}>
               <p className="header">{HomeSectionBBoxCheading}</p>
-              <div className="onlydesktop">
+              <div className="onlydesktop" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
@@ -136,7 +136,7 @@ const HomeSectionBB = ({ homev1 }) => {
                   />
                 </div>
               </div>
-              <div className="onlymobile">
+              <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={

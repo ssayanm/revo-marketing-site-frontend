@@ -45,22 +45,41 @@ const HomeSectionAA = ({ homev1 }) => {
               <p className="circle">{HomeSectionABoxAicon}</p>
               <p className="header">{HomeSectionABoxAheading}</p>
               <p className="info">{HomeSectionABoxAsubHeading}</p>
-
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxAimage.data.attributes.url
-                      ? HomeSectionABoxAimage.data.attributes.url
-                      : "/videos/createplaylist.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
+              <div className="onlydesktop" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxAimage.data.attributes.url
+                        ? HomeSectionABoxAimage.data.attributes.url
+                        : "/videos/createplaylist.m4v"
+                    }
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+              <div className="onlymobile" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxAimage.data.attributes.url
+                        ? HomeSectionABoxAimage.data.attributes.url
+                        : "/videos/createplaylist.m4v"
+                    }
+                    playing={false}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
               </div>
               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxAbuttonLink}`}>
@@ -73,21 +92,41 @@ const HomeSectionAA = ({ homev1 }) => {
               <p className="header">{HomeSectionABoxBheading}</p>
               <p className="info">{HomeSectionABoxBsubHeading}</p>
 
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxBimage.data.attributes.url
-                      ? HomeSectionABoxBimage.data.attributes.url
-                      : "/videos/Liveshow.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
+              <div className="onlydesktop" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxBimage.data.attributes.url
+                        ? HomeSectionABoxBimage.data.attributes.url
+                        : "/videos/Liveshow.m4v"
+                    }
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+              <div className="onlymobile" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxBimage.data.attributes.url
+                        ? HomeSectionABoxBimage.data.attributes.url
+                        : "/videos/Liveshow.m4v"
+                    }
+                    playing={false}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
               </div>
               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxBbuttonLink}`}>
@@ -100,21 +139,42 @@ const HomeSectionAA = ({ homev1 }) => {
               <p className="header">{HomeSectionABoxCheading}</p>
               <p className="info">{HomeSectionABoxCsubHeading}</p>
 
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxCimage.data.attributes.url
-                      ? HomeSectionABoxCimage.data.attributes.url
-                      : "/videos/VideoShopping.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
+              <div className="onlydesktop" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxCimage.data.attributes.url
+                        ? HomeSectionABoxCimage.data.attributes.url
+                        : "/videos/VideoShopping.m4v"
+                    }
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+
+              <div className="onlymobile" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxCimage.data.attributes.url
+                        ? HomeSectionABoxCimage.data.attributes.url
+                        : "/videos/VideoShopping.m4v"
+                    }
+                    playing={false}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
               </div>
               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxCbuttonLink}`}>
