@@ -24,48 +24,27 @@ const customStyles = {
   }),
 };
 
-const HomeCategories = ({ homev1 }) => {
+const HomeSectionCC = ({ homev1 }) => {
   // const [value, setValue] = useState(0);
 
-  const { HomeSectionCheading, HomeSectionCBoxA, HomeSectionCBoxAimage } =
-    homev1.data.attributes;
+  const { HomeSectionCheading } = homev1.data.attributes;
 
   const [selectedOption, setSelectedOption] = useState(homeCategories[0]);
 
   return (
     <NavContainer>
-      {/* <h1 className="title text-center">{HomeSectionCheading}</h1>*/}
-
-      <h1 className="title text-center">The perfect video solution</h1>
-
-      {/*  <Tabs
-        defaultActiveKey="1"
-        onChange={callback}
-        centered="true"
-        className="onlydesktop"
-      >
-        {homeCategories.map((link, index) => {
-          const { id, text, components } = link;
-          return (
-            <Items tab={text} key={id}>
-              {components}
-            </Items>
-          );
-        })}
-      </Tabs>*/}
+      <h1 className="title text-center">{HomeSectionCheading}</h1>
 
       <Tabs
         className="onlydesktop"
         defaultActiveKey="1"
         centered
         items={homeCategories.map((link, index) => {
-          // const id = String(i + 1);
           const { id, text, components } = link;
 
           return {
             label: `${text}`,
             key: `${id}`,
-            // children: <DtcBrands />,
             children: components,
           };
         })}
@@ -185,4 +164,4 @@ const NavContainer = styled.nav`
   }
 `;
 
-export default HomeCategories;
+export default HomeSectionCC;

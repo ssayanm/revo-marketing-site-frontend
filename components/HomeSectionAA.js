@@ -7,31 +7,31 @@ import Image from "next/image";
 import ReactPlayer from "react-player";
 import dynamic from "next/dynamic";
 
-const HomeSectionAA = ({ home }) => {
+const HomeSectionAA = ({ homev1 }) => {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-  // const {
-  //   HomeSectionAheading,
-  //   HomeSectionABoxAicon,
-  //   HomeSectionABoxAimage,
-  //   HomeSectionABoxAheading,
-  //   HomeSectionABoxAsubHeading,
-  //   HomeSectionABoxAbutton,
-  //   HomeSectionABoxAbuttonLink,
+  const {
+    HomeSectionAheading,
+    HomeSectionABoxAicon,
+    HomeSectionABoxAimage,
+    HomeSectionABoxAheading,
+    HomeSectionABoxAsubHeading,
+    HomeSectionABoxAbutton,
+    HomeSectionABoxAbuttonLink,
 
-  //   HomeSectionABoxBicon,
-  //   HomeSectionABoxBimage,
-  //   HomeSectionABoxBheading,
-  //   HomeSectionABoxBsubHeading,
-  //   HomeSectionABoxBbutton,
-  //   HomeSectionABoxBbuttonLink,
+    HomeSectionABoxBicon,
+    HomeSectionABoxBimage,
+    HomeSectionABoxBheading,
+    HomeSectionABoxBsubHeading,
+    HomeSectionABoxBbutton,
+    HomeSectionABoxBbuttonLink,
 
-  //   HomeSectionABoxCicon,
-  //   HomeSectionABoxCimage,
-  //   HomeSectionABoxCheading,
-  //   HomeSectionABoxCsubHeading,
-  //   HomeSectionABoxCbutton,
-  //   HomeSectionABoxCbuttonLink,
-  // } = homev1.data.attributes;
+    HomeSectionABoxCicon,
+    HomeSectionABoxCimage,
+    HomeSectionABoxCheading,
+    HomeSectionABoxCsubHeading,
+    HomeSectionABoxCbutton,
+    HomeSectionABoxCbuttonLink,
+  } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
@@ -42,33 +42,57 @@ const HomeSectionAA = ({ home }) => {
           </Col>
           <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={8}>
-              {/*
               <p className="circle">{HomeSectionABoxAicon}</p>
               <p className="header">{HomeSectionABoxAheading}</p>
               <p className="info">{HomeSectionABoxAsubHeading}</p>
-
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxAimage.data.attributes.url
-                      ? HomeSectionABoxAimage.data.attributes.url
-                      : "/videos/createplaylist.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
+              <div className="onlydesktop" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxAimage.data.attributes.url
+                        ? HomeSectionABoxAimage.data.attributes.url
+                        : "/videos/createplaylist.m4v"
+                    }
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+              <div className="onlymobile" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxAimage.data.attributes.url
+                        ? HomeSectionABoxAimage.data.attributes.url
+                        : "/videos/createplaylist.m4v"
+                    }
+                    playing={false}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
               </div>
               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxAbuttonLink}`}>
                   <a className="btn1 btn-start">{HomeSectionABoxAbutton}</a>
                 </Link>
               </div>
+            </Col>
+            <Col sm={24} md={12} xl={8} className="colspace">
+              <p className="circle">{HomeSectionABoxBicon}</p>
+              <p className="header">{HomeSectionABoxBheading}</p>
+              <p className="info">{HomeSectionABoxBsubHeading}</p>
 
+<<<<<<< HEAD:components/HeroSectionAA.js
 
               */}
               <p className="circle">1</p>
@@ -77,9 +101,63 @@ const HomeSectionAA = ({ home }) => {
                 Leverage existing content to create shoppable videos
               </p>
               <div className="onlydesktop">
+=======
+              <div className="onlydesktop" data-aos="zoom-in">
+>>>>>>> staging:components/HomeSectionAA.js
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url="/videos/createplaylist.m4v"
+                    url={
+                      HomeSectionABoxBimage.data.attributes.url
+                        ? HomeSectionABoxBimage.data.attributes.url
+                        : "/videos/Liveshow.m4v"
+                    }
+                    playing={true}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+              <div className="onlymobile" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxBimage.data.attributes.url
+                        ? HomeSectionABoxBimage.data.attributes.url
+                        : "/videos/Liveshow.m4v"
+                    }
+                    playing={false}
+                    muted={true}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="react-player"
+                    image="https://via.placeholder.com/400"
+                  />
+                </div>
+              </div>
+              <div className="btn-section">
+                <Link href={`/${HomeSectionABoxBbuttonLink}`}>
+                  <a className="btn1 btn-start">{HomeSectionABoxBbutton}</a>
+                </Link>
+              </div>
+            </Col>
+            <Col sm={24} md={12} xl={8} className="colspace">
+              <p className="circle">{HomeSectionABoxCicon}</p>
+              <p className="header">{HomeSectionABoxCheading}</p>
+              <p className="info">{HomeSectionABoxCsubHeading}</p>
+
+              <div className="onlydesktop" data-aos="zoom-in">
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    url={
+                      HomeSectionABoxCimage.data.attributes.url
+                        ? HomeSectionABoxCimage.data.attributes.url
+                        : "/videos/VideoShopping.m4v"
+                    }
                     playing={true}
                     muted={true}
                     controls={true}
@@ -94,7 +172,11 @@ const HomeSectionAA = ({ home }) => {
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url="/videos/createplaylist.m4v"
+                    url={
+                      HomeSectionABoxCimage.data.attributes.url
+                        ? HomeSectionABoxCimage.data.attributes.url
+                        : "/videos/VideoShopping.m4v"
+                    }
                     playing={false}
                     muted={true}
                     controls={true}
@@ -105,149 +187,9 @@ const HomeSectionAA = ({ home }) => {
                   />
                 </div>
               </div>
-
               <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
-                </Link>
-              </div>
-            </Col>
-            <Col sm={24} md={12} xl={8} className="colspace">
-              {/*
-              <p className="circle">{HomeSectionABoxBicon}</p>
-              <p className="header">{HomeSectionABoxBheading}</p>
-              <p className="info">{HomeSectionABoxBsubHeading}</p>
-
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxBimage.data.attributes.url
-                      ? HomeSectionABoxBimage.data.attributes.url
-                      : "/videos/Liveshow.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
-                
-              </div>
-              <div className="btn-section">
-                <Link href={`/${HomeSectionABoxBbuttonLink}`}>
-                  <a className="btn1 btn-start">{HomeSectionABoxbbutton}</a>
-                </Link>
-              </div>
-              */}
-
-              <p className="circle">2</p>
-              <p className="header">Live Shopping</p>
-              <p className="info">
-                Use an engaging creator to promote shopping during a live event
-              </p>
-              <div className="onlydesktop">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/Liveshow.m4v"
-                    playing={true}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="onlymobile">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/Liveshow.m4v"
-                    playing={false}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
-                </Link>
-              </div>
-            </Col>
-            <Col sm={24} md={12} xl={8} className="colspace">
-              {/*
-              <p className="circle">{HomeSectionABoxCicon}</p>
-              <p className="header">{HomeSectionABoxCheading}</p>
-              <p className="info">{HomeSectionABoxCsubHeading}</p>
-
-              <div className="player-wrapper">
-                <ReactPlayer
-                  url={
-                    HomeSectionABoxCimage.data.attributes.url
-                      ? HomeSectionABoxCimage.data.attributes.url
-                      : "/videos/VideoShopping.m4v"
-                  }
-                  playing={true}
-                  muted={true}
-                  controls={true}
-                  width="100%"
-                  height="100%"
-                  className="react-player"
-                  image="https://via.placeholder.com/400"
-                />
-              </div>
-               <div className="btn-section">
                 <Link href={`/${HomeSectionABoxCbuttonLink}`}>
                   <a className="btn1 btn-start">{HomeSectionABoxCbutton}</a>
-                </Link>
-              </div>
-              */}
-              <p className="circle">3</p>
-              <p className="header">1:1 Video Shopping</p>
-              <p className="info">
-                Personalized shopping experience between brand and consumer
-              </p>
-              <div className="onlydesktop">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/VideoShopping.m4v"
-                    playing={true}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-              <div className="onlymobile">
-                <div className="player-wrapper">
-                  <ReactPlayer
-                    url="/videos/VideoShopping.m4v"
-                    playing={false}
-                    muted={true}
-                    controls={true}
-                    width="100%"
-                    height="100%"
-                    className="react-player"
-                    image="https://via.placeholder.com/400"
-                  />
-                </div>
-              </div>
-
-              <div className="btn-section">
-                <Link href="/get-started">
-                  <a className="btn1 btn-start"> Learn More</a>
                 </Link>
               </div>
             </Col>
@@ -259,12 +201,8 @@ const HomeSectionAA = ({ home }) => {
 };
 
 const Wrapper = styled.section`
-  /* min-height: 50vh; */
   padding: 6rem 2rem 4rem;
   background: var(--clr-black);
-  /* background-image: url("/images/circle.png"); */
-  /* background-repeat: no-repeat; */
-  /* padding: 6rem 2rem; */
   margin: 0 auto;
   text-align: center;
 
@@ -284,7 +222,6 @@ const Wrapper = styled.section`
   }
 
   .btn-start {
-    /* background: var(--clr-primary-1); */
     color: var(--clr-white);
     font-size: 1.3rem;
     border-bottom: 1px solid var(--clr-white);
@@ -294,7 +231,6 @@ const Wrapper = styled.section`
 
     &:hover {
       color: var(--clr-primary-1);
-      /* background: var(--clr-white); */
       border-bottom: 1px solid var(--clr-primary-1);
     }
   }

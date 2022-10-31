@@ -5,14 +5,14 @@ import HomeHero from "../components/HomeHero";
 import HomeSectionB from "../components/HomeSectionB";
 import HomeSectionC from "../components/HomeSectionC";
 import HomeSectionD from "../components/HomeSectionD";
-import HomeSectionE from "../components/HomeSectionE";
+
 import Loading from "../components/Loading";
 import HomeHeaderBanner from "../components/HomeHeaderBanner";
-import HomeSectionAA from "../components/HeroSectionAA";
+import HomeSectionAA from "../components/HomeSectionAA";
 import HomeSectionBB from "../components/HomeSectionBB";
+import HomeSectionCC from "../components/HomeSectionCC";
 import HomeSectionDD from "../components/HomeSectionDD";
-import DtcBrands from "../components/DtcBrands";
-import HomeCategories from "../components/HomeCategories";
+import HomeSectionE from "../components/HomeSectionE";
 
 export const getStaticProps = async () => {
   try {
@@ -41,16 +41,12 @@ const Home = ({ home, homev1 }) => {
     <>
       <Meta title="Home" />
       <HomeHeaderBanner homev1={homev1} />
-      <HomeHero home={home} homev1={homev1} />
-      <HomeSectionAA home={home} />
-      <HomeSectionBB home={home} />
-      <HomeCategories homev1={homev1} />
-
-      <HomeSectionDD home={home} />
-      {/* <HomeSectionB home={home} />*/}
-      {/*<HomeSectionD home={home} />
-      <HomeSectionC home={home} />*/}
-      <HomeSectionE home={home} homev1={homev1} />
+      <HomeHero homev1={homev1} />
+      <HomeSectionAA homev1={homev1} />
+      <HomeSectionBB homev1={homev1} />
+      <HomeSectionCC homev1={homev1} />
+      <HomeSectionDD homev1={homev1} />
+      <HomeSectionE homev1={homev1} />
     </>
   );
 };

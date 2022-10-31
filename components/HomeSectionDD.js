@@ -1,29 +1,26 @@
-import { BsPlayCircle } from "react-icons/bs";
 import styled from "styled-components";
 import { Row, Col } from "antd";
-import ReactMarkdown from "react-markdown";
-import Image from "next/image";
-import Link from "next/link";
 
-const HomeSectionDD = ({ home }) => {
-  // const {
-  //   HomeSectionDheading,
-  //   HomeSectionDboxA,
-  //   HomeSectionDboxALink,
-  //   HomeSectionDboxB,
-  //   HomeSectionDboxBLink,
-  // } = homev1.data.attributes;
+const HomeSectionDD = ({ homev1 }) => {
+  const {
+    HomeSectionDheading,
+    HomeSectionDboxA,
+    HomeSectionDboxALink,
+    HomeSectionDboxB,
+    HomeSectionDboxBLink,
+    HomeSectionDboxC,
+    HomeSectionDboxCLink,
+  } = homev1.data.attributes;
   return (
     <Wrapper>
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
           <Col data-aos="fade-up">
-            {/*<h1 className="title1">{HomeSectionDheading}</h1>*/}
-            <h1 className="title1">In the Press</h1>
+            <h1 className="title1">{HomeSectionDheading}</h1>
           </Col>
           <Row className="space" data-aos="fade-up">
             <Col sm={24} md={12} xl={12}>
-              {/* <p className="info">
+              <p className="info">
                 <a
                   href={HomeSectionDboxALink}
                   // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
@@ -32,6 +29,7 @@ const HomeSectionDD = ({ home }) => {
                 >
                   {HomeSectionDboxA}
                 </a>
+<<<<<<< HEAD
   </p>*/}
 
               <p className="info">
@@ -70,6 +68,12 @@ const HomeSectionDD = ({ home }) => {
             </Col>
             <Col sm={24} md={24} xl={24}>
               {/* <p className="info">
+=======
+              </p>
+            </Col>
+            <Col sm={24} md={12} xl={12}>
+              <p className="info">
+>>>>>>> staging
                 <a
                   href={HomeSectionDboxBLink}
                   // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
@@ -78,16 +82,17 @@ const HomeSectionDD = ({ home }) => {
                 >
                   {HomeSectionDboxB}
                 </a>
-</p>*/}
-
+              </p>
+            </Col>
+            <Col sm={24} md={24} xl={24}>
               <p className="info">
                 <a
-                  href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
+                  href={HomeSectionDboxCLink}
+                  // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Revo Video Launches Its New All-in-One Shopping Experience
-                  Platform on the ReachTV Network
+                  {HomeSectionDboxC}
                 </a>
               </p>
             </Col>
@@ -99,11 +104,7 @@ const HomeSectionDD = ({ home }) => {
 };
 
 const Wrapper = styled.section`
-  /* min-height: 50vh; */
   background: var(--clr-white);
-
-  /* background-image: url("/images/circle.png"); */
-  /* background-repeat: no-repeat; */
   padding: 3rem 2rem 2rem;
   margin: 0 auto;
   text-align: center;

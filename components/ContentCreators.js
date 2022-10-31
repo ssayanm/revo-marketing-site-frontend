@@ -1,18 +1,15 @@
 import styled from "styled-components";
-import { BsPlayFill } from "react-icons/bs";
 import Image from "next/image";
 import { Row, Col } from "antd";
-import ReactPlayer from "react-player/lazy";
 import useSWR from "swr";
 import Loading from "./Loading";
-import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const ContentCreators = () => {
   const { data, error } = useSWR(
-    `${process.env.url}/api/how-it-works?populate=*`,
+    `${process.env.url}/api/home-v1/?populate=*`,
     fetcher
   );
 
@@ -35,7 +32,12 @@ const ContentCreators = () => {
         <Col sm={24} md={12} data-aos="zoom-in">
           <Image
             alt="Revo Video"
-            src="/images/paymentprocess.png"
+            src={
+              data.data.attributes.HomeSectionCBoxBimage.data.attributes.url
+                ? data.data.attributes.HomeSectionCBoxBimage.data.attributes.url
+                : "/images/paymentprocess.jpg"
+            }
+            // src="/images/paymentprocess.png"
             width={1000}
             height={625}
             objectFit="cover"
@@ -43,25 +45,25 @@ const ContentCreators = () => {
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
-          {/*  <div className="iconbar">
-            <BsPlayFill className="icon" />
-          <h1 className="title">{data.data[6].attributes.heading}</h1>
-          </div>
-              <ReactMarkdown children={data.data[6].attributes.subHeading} />
-        */}
-          <h1 className="title">For Content Creators</h1>
-          <p>
-            Sell like you already do on IG, FB and TikTok, everywhere with zero
-            ad cost, higher conversion rates and infinite reach.
-          </p>
+          <h1 className="title">
+            {data.data.attributes.HomeSectionCBoxBheading}
+          </h1>
+
+          <p>{data.data.attributes.HomeSectionCBoxBsubHeading}</p>
           <div className="onlydesktop">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxBbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxBbutton}
+              </a>
             </Link>
           </div>
           <center className="onlymobile">
-            <Link href="/get-started">
-              <a className="btn btn-start"> Try it Free</a>
+            <Link href={`/${data.data.attributes.HomeSectionCBoxBbuttonLink}`}>
+              <a className="btn btn-start">
+                {" "}
+                {data.data.attributes.HomeSectionCBoxBbutton}
+              </a>
             </Link>
           </center>
         </Col>

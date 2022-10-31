@@ -1,13 +1,11 @@
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import Link from "next/link";
-
-// import ReactPlayer from "react-player/lazy";
 import dynamic from "next/dynamic";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-const HomeHero = ({ home, homev1 }) => {
+const HomeHero = ({ homev1 }) => {
   const { heading, subHeading, heroVideo, heroPara, buttonText, buttonLink } =
     homev1.data.attributes;
 
@@ -17,17 +15,17 @@ const HomeHero = ({ home, homev1 }) => {
         <Row gutter={32} justify="center" align="middle" className="herorow">
           <Col sm={24} md={24} lg={12} data-aos="fade-up">
             <div className="content">
-              {/*<h1 className="title">{heading}</h1>
+              <h1 className="title">{heading}</h1>
               <h3>{subHeading}</h3>
-              <p>{heroPara}</p>*/}
+              <p>{heroPara}</p>
 
-              <h1 className="title">
+              {/*<h1 className="title">
                 The most robust video shopping solution, period.
               </h1>
               <p>
                 VOD, Live & 1:1 all with one-click pay. Get more sales and
                 conversions with Revo.
-              </p>
+              </p>*/}
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
@@ -41,7 +39,7 @@ const HomeHero = ({ home, homev1 }) => {
                     controls={true}
                     width="100%"
                     height="100%"
-                    // image="/images/herovideo.jpg"
+                    image="/images/herovideo.jpg"
                     className="react-player"
                   />
                 </div>
