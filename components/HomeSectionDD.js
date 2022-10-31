@@ -29,51 +29,10 @@ const HomeSectionDD = ({ homev1 }) => {
                 >
                   {HomeSectionDboxA}
                 </a>
-<<<<<<< HEAD
-  </p>*/}
-
-              <p className="info">
-                <a
-                  href="https://www.retailbrew.com/stories/2022/10/18/it-s-not-too-late-to-test-a-live-shopping-strategy-for-the-holidays"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  It’s not too late to test a live-shopping strategy for the
-                  holidays
-                </a>
-              </p>
-            </Col>
-            <Col sm={24} md={12} xl={12}>
-              {/* <p className="info">
-                <a
-                  href={HomeSectionDboxALink}
-                  // href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {HomeSectionDboxA}
-                </a>
-  </p>*/}
-
-              <p className="info">
-                <a
-                  href="https://www.pymnts.com/news/ecommerce/2022/revo-videos-mission-to-make-every-video-shoppable-with-just-one-click/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Revo Video’s Mission to Make Every Video Shoppable With Just
-                  One Click
-                </a>
-              </p>
-            </Col>
-            <Col sm={24} md={24} xl={24}>
-              {/* <p className="info">
-=======
               </p>
             </Col>
             <Col sm={24} md={12} xl={12}>
               <p className="info">
->>>>>>> staging
                 <a
                   href={HomeSectionDboxBLink}
                   // href="https://www.prnewswire.com/news-releases/revo-video-launches-its-new-all-in-one-shopping-experience-platform-on-the-reachtv-network-301611081.html"

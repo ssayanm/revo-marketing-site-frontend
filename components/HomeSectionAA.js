@@ -92,18 +92,7 @@ const HomeSectionAA = ({ homev1 }) => {
               <p className="header">{HomeSectionABoxBheading}</p>
               <p className="info">{HomeSectionABoxBsubHeading}</p>
 
-<<<<<<< HEAD:components/HeroSectionAA.js
-
-              */}
-              <p className="circle">1</p>
-              <p className="header">Short Form Video</p>
-              <p className="info">
-                Leverage existing content to create shoppable videos
-              </p>
-              <div className="onlydesktop">
-=======
               <div className="onlydesktop" data-aos="zoom-in">
->>>>>>> staging:components/HomeSectionAA.js
                 <div className="player-wrapper">
                   <ReactPlayer
                     url={
