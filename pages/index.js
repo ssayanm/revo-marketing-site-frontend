@@ -13,30 +13,31 @@ import HomeSectionBB from "../components/HomeSectionBB";
 import HomeSectionCC from "../components/HomeSectionCC";
 import HomeSectionDD from "../components/HomeSectionDD";
 import HomeSectionE from "../components/HomeSectionE";
+import HomeSectionTestimonials from "../components/HomeSectionTestimonials";
 
 export const getStaticProps = async () => {
   try {
-    const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
+    // const res = await axios.get(`${process.env.url}/api/home/?populate=*`);
     const response = await axios.get(
       `${process.env.url}/api/home-v1/?populate=*`
     );
 
-    const home = res.data;
+    // const home = res.data;
     const homev1 = response.data;
 
-    if (!home)
+    if (!homev1)
       return (
         <div>
           <Loading />
         </div>
       );
-    return { props: { home, homev1 } };
+    return { props: { homev1 } };
   } catch (error) {
     return { error };
   }
 };
 
-const Home = ({ home, homev1 }) => {
+const Home = ({ homev1 }) => {
   return (
     <>
       <Meta title="Home" />
@@ -44,6 +45,7 @@ const Home = ({ home, homev1 }) => {
       <HomeHero homev1={homev1} />
       <HomeSectionAA homev1={homev1} />
       <HomeSectionBB homev1={homev1} />
+      {/* <HomeSectionTestimonials homev1={homev1} />*/}
       <HomeSectionCC homev1={homev1} />
       <HomeSectionDD homev1={homev1} />
       <HomeSectionE homev1={homev1} />

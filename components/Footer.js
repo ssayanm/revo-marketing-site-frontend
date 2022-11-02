@@ -130,7 +130,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://www.facebook.com/revovideo">
+              <Link href="https://facebook.com/people/Revo-Video/100084040729038/">
                 <a target="_blank">
                   <FaFacebookSquare className="social-icon "></FaFacebookSquare>
                 </a>
