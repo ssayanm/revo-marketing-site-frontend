@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Row, Col } from "antd";
 import ReactMarkdown from "react-markdown";
 import { Carousel } from "antd";
+import { BsChatRightQuote } from "react-icons/bs";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const contentStyle = {
   //   height: "160px",
@@ -22,12 +24,13 @@ const HomeSectionTestimonials = ({ homev1 }) => {
         <Col sm={24} md={16} xl={16} data-aos="fade-up">
           <Carousel dots="true" effect="fade">
             <div>
-              <span className="title">"</span>
-              <span className="title">
-                This is an amazing tool. It is definitely the future of eComm.
-              </span>
-              <span className="sub">- happy customer</span>
-              <span className="title">"</span>
+              <div className="title">
+                "This is an amazing tool. It is definitely the future of eComm.
+                <span className="sub">
+                  <br className="onlymobile" />- happy customer
+                </span>
+                "
+              </div>
             </div>
             <div>
               <span className="title">"</span>
@@ -42,12 +45,6 @@ const HomeSectionTestimonials = ({ homev1 }) => {
               <h3 className="title">Lorem Lorem</h3>
             </div>
           </Carousel>
-          <ReactMarkdown children={HomeSectionEheading} className="title" />
-          <center>
-            <Link href={`/${HomeSectionEbuttonLink}`}>
-              <a className="btn"> {HomeSectionEbutton}</a>
-            </Link>
-          </center>
         </Col>
       </Row>
     </Wrapper>
@@ -77,6 +74,9 @@ const Wrapper = styled.section`
     font-family: "MontSemiBold", sans-serif;
     font-size: 1.75rem;
   }
+
+  .ant-carousel .slick-dots li.slick-active {
+  }
   .ant-carousel .slick-dots li.slick-active button {
     background: var(--clr-green-light);
   }
@@ -84,6 +84,17 @@ const Wrapper = styled.section`
   .ant-carousel .slick-dots li button {
     margin-top: 1rem;
     background: var(--clr-light);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .ant-carousel .slick-dots {
+    top: 18rem;
+  }
+
+  .ant-carousel .slick-dots li {
+    margin-right: 0.5rem;
   }
 
   @media (min-width: 992px) {
@@ -98,11 +109,15 @@ const Wrapper = styled.section`
     }
     .sub {
       font-size: 1.5rem;
-      padding-left: 15rem;
+      padding-left: 5rem;
       text-align: right;
     }
     p {
       font-size: 2.3rem;
+    }
+
+    .ant-carousel .slick-dots {
+      top: 15rem;
     }
   }
 `;
