@@ -23,7 +23,13 @@ const HomeSectionTestimonials = ({ homev1 }) => {
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col sm={24} md={16} xl={16} data-aos="fade-up">
-          <Carousel dots="true" effect="fade" autoplay="true">
+          <Carousel
+            dots="true"
+            effect="fade"
+            autoplay
+            // autoplaySpeed={5000}
+            pauseOnHover="true"
+          >
             <div className="text-center ">
               <p className="title">
                 "StreamStyle (Revo Video) helped us in the digital
