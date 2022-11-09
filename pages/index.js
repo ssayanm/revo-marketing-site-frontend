@@ -44,10 +44,10 @@ const Home = ({ homev1 }) => {
       <Meta title="Home" />
       <HomeHeaderBanner homev1={homev1} />
       <HomeHero homev1={homev1} />
-      {/*<HomeSectionAA homev1={homev1} />*/}
+      {<HomeSectionAA homev1={homev1} />}
       {/* <HomeSectionBB homev1={homev1} />*/}
 
-      {/*<HomeSectionBBB homev1={homev1} />*/}
+      {<HomeSectionBBB homev1={homev1} />}
       <HomeSectionTestimonials homev1={homev1} />
       <HomeSectionCC homev1={homev1} />
       <HomeSectionDD homev1={homev1} />
