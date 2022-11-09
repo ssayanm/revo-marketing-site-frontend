@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import { Carousel } from "antd";
 import { BsChatRightQuote } from "react-icons/bs";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import Image from "next/image";
 
 const contentStyle = {
   //   height: "160px",
@@ -22,27 +23,70 @@ const HomeSectionTestimonials = ({ homev1 }) => {
     <Wrapper>
       <Row gutter={16} justify="center" align="middle">
         <Col sm={24} md={16} xl={16} data-aos="fade-up">
-          <Carousel dots="true" effect="fade">
-            <div>
-              <div className="title">
-                "This is an amazing tool. It is definitely the future of eComm.
-                <span className="sub">
-                  <br className="onlymobile" />- happy customer
-                </span>
-                "
-              </div>
+          <Carousel dots="true" effect="fade" autoplay="true">
+            <div className="text-center ">
+              <p className="title">
+                "StreamStyle (Revo Video) helped us in the digital
+                transformation of our business making it easy for our
+                consultants to convert prospects into customers. Automating most
+                of the processes that used to happen manually saved a lot of
+                time that our field can now invest in more revenue generating
+                activities.”
+              </p>
+              <Image
+                alt="Revo Video"
+                src="/images/Fabio Fiorellino - Tocara.jpg"
+                // src="/images/paymentprocess.png"
+                width={150}
+                height={150}
+                objectFit="cover"
+                className="testi"
+                // quality={100}
+              />
+              <p className="sub">
+                - Fabio Fiorellino <br /> Vice President, Digital, Tocara
+              </p>
             </div>
-            <div>
-              <span className="title">"</span>
-              <span className="title">Lorem Lorem</span>
-              <span className="sub">- happy customer</span>
-              <span className="title">"</span>
+            <div className="text-center ">
+              <p className="title">
+                "Using Revo Video's platform was a seamless experience as it was
+                very intuitive, straightforward and easy to use. The live format
+                is a great way to have an authentic discussion about products
+                that allow our customers to ask questions and participate in
+                real time.”
+              </p>
+              <Image
+                alt="Revo Video"
+                src="/images/Shannon Britt - Olura.jpg"
+                // src="/images/paymentprocess.png"
+                width={150}
+                height={150}
+                objectFit="cover"
+                className="testi"
+                // quality={100}
+              />
+              <p className="sub">
+                - Shannon Britt <br /> CEO and Co-Founder, Olura
+              </p>
             </div>
-            <div>
-              <h3 className="title">Lorem Lorem</h3>
-            </div>
-            <div>
-              <h3 className="title">Lorem Lorem</h3>
+            <div className="text-center ">
+              <p className="title">
+                "This is a software you need to have if you are an e-commerce
+                entrepreneur looking to bring in more sales.”
+              </p>
+              <Image
+                alt="Revo Video"
+                src="/images/Oyeta Kokoroko - Okoko Cosmetiques.jpg"
+                // src="/images/paymentprocess.png"
+                width={150}
+                height={150}
+                objectFit="cover"
+                className="testi"
+                // quality={100}
+              />
+              <p className="sub">
+                - Oyéta Kokoroko <br /> Founder & CEO, OKOKO Cosmétiques Inc.
+              </p>
             </div>
           </Carousel>
         </Col>
@@ -55,24 +99,22 @@ const Wrapper = styled.section`
   /* background: var(--clr-primary-1); */
   margin: 0 auto;
   padding: 6rem 2rem;
-  .title {
-    text-align: center;
-  }
 
-  .title p {
-    margin-bottom: 0rem;
-    font-family: "MontBold", sans-serif;
-    font-size: 2.2rem;
+  .title {
+    margin-bottom: 2rem;
+    font-family: "MontSemiBold", sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
   }
 
   .sub {
     font-size: 1.2rem;
+    margin: 2rem 0;
   }
 
-  p {
+  .testi {
+    border-radius: 50%;
     text-align: center;
-    font-family: "MontSemiBold", sans-serif;
-    font-size: 1.75rem;
   }
 
   .ant-carousel .slick-dots li.slick-active {
@@ -90,7 +132,7 @@ const Wrapper = styled.section`
   }
 
   .ant-carousel .slick-dots {
-    top: 18rem;
+    /* top: 18rem; */
   }
 
   .ant-carousel .slick-dots li {
@@ -99,25 +141,18 @@ const Wrapper = styled.section`
 
   @media (min-width: 992px) {
     padding: 9rem 2rem;
-    .title p {
-      font-size: 3.5rem;
+    .title {
+      font-size: 1.75rem;
     }
 
-    .title {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
     .sub {
-      font-size: 1.5rem;
-      padding-left: 5rem;
-      text-align: right;
-    }
-    p {
-      font-size: 2.3rem;
+      font-size: 1.25rem;
+      /* padding-left: 5rem; */
+      /* text-align: right; */
     }
 
     .ant-carousel .slick-dots {
-      top: 15rem;
+      /* top: 15rem; */
     }
   }
 `;

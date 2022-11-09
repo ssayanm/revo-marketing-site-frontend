@@ -29,11 +29,12 @@ const HomeHero = ({ homev1 }) => {
               <div className="onlymobile" data-aos="zoom-in">
                 <div className="player-wrapper">
                   <ReactPlayer
-                    url={
-                      heroVideo.data.attributes.url
-                        ? heroVideo.data.attributes.url
-                        : "/videos/REVO_video_V3_06_24.m4v"
-                    }
+                    // url={
+                    //   heroVideo.data.attributes.url
+                    //     ? heroVideo.data.attributes.url
+                    //     : "/videos/RevoHeroFinal1.m4v"
+                    // }
+                    url="/videos/RevoHeroFinal1.m4v"
                     playing={false}
                     muted={true}
                     controls={true}
@@ -55,11 +56,12 @@ const HomeHero = ({ homev1 }) => {
             <div className="onlydesktop">
               <div className="player-wrapper">
                 <ReactPlayer
-                  url={
-                    heroVideo.data.attributes.url
-                      ? heroVideo.data.attributes.url
-                      : "/videos/homevideo.mp4"
-                  }
+                  // url={
+                  //   heroVideo.data.attributes.url
+                  //     ? heroVideo.data.attributes.url
+                  //     : "/videos/RevoHeroFinal1.m4v"
+                  // }
+                  url="/videos/RevoHeroFinal1.m4v"
                   playing={true}
                   muted={true}
                   controls={true}
