@@ -36,7 +36,7 @@ const HomeSectionAAA = ({ homev1 }) => {
     <Wrapper>
       <div className="section-center">
         <Row gutter={16} justify="center" align="middle">
-          <Col sm={24} md={18} xl={18}>
+          <Col sm={24} md={18} xl={16}>
             <h1 className="title ">Grow your business with shoppable videos</h1>
 
             <div className="onlydesktop space" data-aos="zoom-in">
