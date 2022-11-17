@@ -15,6 +15,7 @@ import HomeSectionDD from "../components/HomeSectionDD";
 import HomeSectionE from "../components/HomeSectionE";
 import HomeSectionTestimonials from "../components/HomeSectionTestimonials";
 import HomeSectionBBB from "../components/HomeSectionBBB";
+import HomeSectionAAA from "../components/HomeSectionAAA";
 
 export const getStaticProps = async () => {
   try {
@@ -44,7 +45,8 @@ const Home = ({ homev1 }) => {
       <Meta title="Home" />
       <HomeHeaderBanner homev1={homev1} />
       <HomeHero homev1={homev1} />
-      {<HomeSectionAA homev1={homev1} />}
+      <HomeSectionAAA homev1={homev1} />
+      {/*<HomeSectionAA homev1={homev1} />*/}
       {/* <HomeSectionBB homev1={homev1} />*/}
 
       {<HomeSectionBBB homev1={homev1} />}
