@@ -89,7 +89,6 @@ const Creators = () => {
             width={1000}
             height={666}
             objectFit="cover"
-            // quality={100}
           />
         </Col>
         <Col sm={24} md={12} data-aos="fade-up">
@@ -110,8 +109,6 @@ const Creators = () => {
             }
             width={1000}
             height={625}
-            objectFit="cover"
-            // quality={100}
           />
         </Col>
       </Row>
